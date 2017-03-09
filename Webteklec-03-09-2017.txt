@@ -1,0 +1,86 @@
+* CSS Selectors
+
+	* Selector
+		*
+	* Selector syntax
+		* chain of one or more sequences of simple selectors separated by
+		  combinators, with one pseudo-element possibly appended to the
+		  last sequence
+	* sequence of simple selectors
+		* chain of simple selectors not separated by combinators
+		* always starts with a type selector or a universal selector
+		* cannot contain other type selectors or universal selectors
+	* group of selectors
+		* comma - separated list of selectors representing the union of
+		  all elements selected by each of the selectors in the list
+
+	* simple selectors
+		* type selector
+		* universal selector
+		* attribute selector
+		* class selector
+		* ID selector
+		* pseudo - class
+			* dynamic pseudo class
+				* link pseudo - class
+					* 
+				* user action pseudo - classes
+					* :hover
+					* :active
+					* :focus
+----------------------------------Lecture: March 9, 2017---------------------------------------------
+			* target pseudo - class
+				* :target^css3
+			* language pseudo - class
+				* :lang()
+			* UI element states pseudo - classes
+				* :enabled^css3
+				* :disabled^css3
+				* :checked^css3
+				* :indeterminate^css3
+			* structural pseudo - classes
+				* :root^css3
+				* :first-child
+				* :last-child^css3
+				* :only-child^css3
+				* :nth-child()^css3
+				* :nth-last-child()^css3
+				* :first-of-type^css3
+				* :last-of-type^css
+				* :only-of-type^css3
+				* :nth-of-type()^css3
+				* :nth-last-of-type()^css3
+				* :empty^css3
+			* negation pseudo-class
+				* :not()^css3
+		
+		* combinators
+			* descendant combinators (whitespace, i.e., space, tab, line feed
+			  carriage return, form feed)
+			* child combinator(>)
+			* sibling combinators
+				* adjacent sibling combinator (+)
+				* general sibling combinator (~)^css3
+			* pseudo - elements
+				* ::first-letter^css3, :first-letter
+				* ::first-line^css3, :first-line
+				* ::before^css3, :before
+				* ::after^css3, :after
+
+* CSS Rule Precedence
+	* by origin and importance
+		* user agent important declarations
+		* user important declarations
+		* author important declarations
+		* author normal declarations
+		* user normal declarations
+		* user agent normal declarations
+	* by specifity
+		* inline style
+		* number of ID selectors
+		* number of class selectors, attribute selectors, and pseudo - elements
+		* number of type selectors and pseudo - elements
+	* by order
+-----------------------------------End Lecture: March 9, 2017-----------------------------------------
+		
+		

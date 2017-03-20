@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/cufon-replace.js"></script>
@@ -49,53 +52,89 @@
                   <div class="wrapper">
                     <article class="col1">
                       <div class="pad_left1">
-                        <h2>HTTP runs on top of TCP/IP</h2>
-                        <p>Using TCP port 80 by default or TCP port 443 for HTTPS (HTTP over SSL/TLS) </p>
-                        <p>IANA, ICANN</p>
-                      </div>
-                      <div class="pad_left1">
-                        <h2>HTTP is based on a client server architecture</h2>
-                        <p>Client (aka User Agents) i.e., web browsers, web crawlers, and other end user tools and applications</p>
-                        <p>Servers i.e., origin servers, proxy servers, gateway</p>
-                      </div>
-                      <div class="pad_left1">
-                        <h2>HTTP uses a request-response standard protocol</h2>
-                        <p>The client sends an HTTP request message to the server</p>
-                          <p>The server processes the request and replies with an HTTP response message</p>
-                      </div>
-                        <div class="pad_left1">
-                            <h2>HTTP is a stateless communications protocol</h2>
-                            <p>Servers do not keep information about client in between requests</p>
-                            <p>Serve and Forget</p>
-                        </div>
-                        <div class="pad_left1">
-                            <h2>HTTP provides aupport for other funtionalities</h2>
-                            <ol type="1">
-                                <li> Cache control </li>
-                                <li> Content media type (MIME) specification </li>
-                                <li> Language and character set specification </li>
-                                <li> Content/Transfer coding </li>
-                                <li> Client server protocol negotiation </li>
-                                <li> Persistent connection </li>
-                                <li> Request pipelining </li>
-                                <li> Authentication/Authorization </li>
-                            </ol>
-                        </div>
-                    </article>
-                    <article class="col2 pad_left2">
-                      <div class="pad_left1">
-                        <h2>Topics</h2>
-                      </div>
-                      <ul class="list1">
-                        <li><a href="#1">HTTP Fundamentals</a></li>
-                        <li><a href="#">HTTP Resource Addressing</a></li>
-                        <li><a href="#">HTTP Request Methods</a></li>
-                        <li><a href="#">General Header Fields</a></li>
-                        <li><a href="#">Request Header Fields</a></li>
-                          <li><a href="#">Response Header Fields</a></li>
-                          <li><a href="#">Entity Header Fields</a></li>
-                          <li><a href="#">HTTP Status Codes</a></li>
-                      </ul>
+						<div class="panel-group" id="accordion">
+							  <div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+								   <h2>HTTP runs on top of TCP/IP</h2></a>
+								  </h4>
+								</div>
+								<div id="collapse1" class="panel-collapse collapse in">
+								  <div class="panel-body">
+									<p>Using TCP port 80 by default or TCP port 443 for HTTPS (HTTP over SSL/TLS) </p>
+									<p>IANA, ICANN</p>
+								  </div>
+								</div>
+							  </div>
+							  <div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+									<h2> HTTP is based on a client server architecture </h2></a>
+								  </h4>
+								</div>
+								<div id="collapse2" class="panel-collapse collapse">
+								  <div class="panel-body">
+								  <p>Client (aka User Agents) i.e., web browsers, web crawlers, and other end user tools and applications</p>
+									<p>Servers i.e., origin servers, proxy servers, gateway</p>
+									</div>
+								</div>
+							  </div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+									<h2> HTTP uses a request-response standard protocol </h2></a>
+								  </h4>
+								</div>
+								<div id="collapse3" class="panel-collapse collapse">
+								  <div class="panel-body">
+								  <p>The client sends an HTTP request message to the server</p>
+								  <p>The server processes the request and replies with an HTTP response message</p>	
+									</div>
+								</div>
+							  </div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+									<h2> HTTP is a stateless communications protocol </h2></a>
+								  </h4>
+								</div>
+								<div id="collapse4" class="panel-collapse collapse">
+								  <div class="panel-body">
+								  <p>Servers do not keep information about client in between requests</p>
+								  <p>Serve and Forget</p>
+									</div>
+								</div>
+							  </div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+									<h2> HTTP provides support for other funtionalities </h2></a>
+								  </h4>
+								</div>
+								<div id="collapse5" class="panel-collapse collapse">
+								  <div class="panel-body">
+								  <ol type="1">
+										<li> Cache control </li>
+										<li> Content media type (MIME) specification </li>
+										<li> Language and character set specification </li>
+										<li> Content/Transfer coding </li>
+										<li> Client server protocol negotiation </li>
+										<li> Persistent connection </li>
+										<li> Request pipelining </li>
+										<li> Authentication/Authorization </li>
+								  </ol>
+									</div>
+								</div>
+							  </div>
+							</div>
                     </article>
                   </div>
                 </div>

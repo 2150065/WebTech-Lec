@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/cufon-replace.js"></script>
     <script type="text/javascript" src="js/Molengo_400.font.js"></script>
     <script type="text/javascript" src="js/Expletus_Sans_400.font.js"></script>
+	<script type="text/javascript" src="js/accordion.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <style type="text/css">.bg, .box2{behavior:url("js/PIE.htc");}</style>
@@ -42,6 +46,8 @@
 
     </header>
   </div>
+  
+  
     <div class="body2">
         <div class="main">
             <section id="content">
@@ -49,21 +55,40 @@
                   <div class="wrapper">
                     <article class="col1">
                       <div class="pad_left1">
-                          <h2>Internet</h2>
-                          <p> According to the Internet Society </p>
-                          <p>Global information system that is: </p>
-                          <ol type="1">
-                              <li> Logically linked together by a globally unique address space based on the IP or subsequent extensions/follow-ons </li>
-                              <li> Able to support communications using the TCP suite or the subsequent extensions/follow-ons and/or othe IP-compatible protocol </li>
-                              <li>Provides uses or makes accessible, either publicly or privately, high-level service s layered on the communications and related infrastructure described </li>
-                          </ol>
-                      </div>
-                        <div class="pad_left1">
-                            <h2>World Wide Web</h2>
-                            <p>Invented by Sir Tim Berners-Lee in 1989</p>
-                            <p> An information system on the Internet that allows documents to be connected to other documents through hyperlinks, enabling user to search for information by moving from one document to another</p>
-
-                        </div>
+						<div class="panel-group" id="accordion">
+							  <div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+								   <h2>Internet</h2></a>
+								  </h4>
+								</div>
+								<div id="collapse1" class="panel-collapse collapse in">
+								  <div class="panel-body">
+									<p>According to the Internet Society,  the Internet is a global information system that is: </p>
+											<ol>
+												<li> Logically linked together by a globally unique address space based on the IP or subsequent extensions/follow-ons </li>
+												<li> Able to support communications using the TCP suite or the subsequent extensions/follow-ons and/or othe IP-compatible protocol </li>
+												<li>Provides uses or makes accessible, either publicly or privately, high-level service s layered on the communications and related infrastructure described </li>
+											</ol>
+								  </div>
+								</div>
+							  </div>
+							  <div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+									<h2> World Wide Web </h2></a>
+								  </h4>
+								</div>
+								<div id="collapse2" class="panel-collapse collapse">
+								  <div class="panel-body">
+								  <p>Invented by Sir Tim Berners-Lee in 1989</p>
+								  <p> An information system on the Internet that allows documents to be connected to other documents through hyperlinks, enabling user to search for information by moving from one document to another</p>
+									</div>
+								</div>
+							  </div>
+							</div>
                     </article>
                     <article class="col2 pad_left2">
                       <div class="pad_left1">

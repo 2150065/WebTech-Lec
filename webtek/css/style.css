@@ -82,6 +82,7 @@ h2 span {
 	display:block;
 	margin-top:-12px
 }
+
 h3 {
 	font-size:27px;
 	color:#000;
@@ -331,6 +332,10 @@ header {
 	color:#000;
 	background-position:0 6px
 }
+list4 ol li {
+	display:list-item;
+	list-style-type: circle; 
+}
 .date {
 	float:left;
 	width:72px;
@@ -435,58 +440,4 @@ footer a:hover {
 	background:url(../images/marker_2.gif) right 17px no-repeat;
 	font-weight:normal;
 	display:block
-}
-/* forms */
-#ContactForm {
-	margin-top:-7px
-}
-#ContactForm strong {
-	width:72px;
-	float:left;
-	line-height:30px
-}
-#ContactForm .bg {
-	float:left;
-	background:#fff;
-	border:1px solid #e5e5e5;
-	border-radius:6px;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	position:relative
-}
-#ContactForm .wrapper {
-	min-height:40px
-}
-#ContactForm .textarea_box {
-	min-height:370px
-}
-#ContactForm {
-}
-#ContactForm .button span span {
-	padding:0;
-	width:116px;
-	text-align:center
-}
-#ContactForm .button {
-	margin-left:8px;
-	float:right;
-	margin-top:15px
-}
-#ContactForm .input {
-	width:505px;
-	height:18px;
-	background:none;
-	padding:5px;
-	color:#4c4c4c;
-	font:14px Tahoma, Geneva, sans-serif
-}
-#ContactForm textarea {
-	overflow:auto;
-	width:505px;
-	height:349px;
-	background:none;
-	padding:5px;
-	color:#4c4c4c;
-	font:14px Tahoma, Geneva, sans-serif;
-	margin:0
 }

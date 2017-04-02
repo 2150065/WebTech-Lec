@@ -52,10 +52,146 @@
                           <h2>Title</h2>
                           <p>paragraph</p>
                       </div>
-                        <div class="pad_left1">
-                            <h2>Title</h2>
-                            <p>paragraph</p>
-                        </div>
+                      <div class="pad_left1">
+                        <h2>Title</h2>
+                        <p>paragraph</p>
+                      </div>
+                       <div class="pad_left1">
+                        <h2>Title</h2>
+                        <p>paragraph</p>
+                      </div>
+                       <div class="pad_left1">
+                        <h2>Title</h2>
+                        <p>paragraph</p>
+                      </div>
+                       <div class="pad_left1">
+                        <h2>CSS Selectors</h2>
+                        <h3>Selectors</h3>
+                        <p>*</p>
+                        <h3>Selector Syntax</h3>
+                        <p>Chain of one or more sequences of simple selectors separated by
+                        combinators, with one pseudo-element possibly appended to the
+                        last sequence</p>
+                        <h3>Sequence of Simple Selectors</h3>
+                        <ul>
+                          <li>Chain of simple selectors not separated by combinators</li>
+                          <li>Always starts with a type selector or a universal selector</li>
+                          <li>Cannot contain other type selectors or universal selectors</li>
+                        </ul>
+                        <h3>Group of Selectors</h3>
+                        <p>Comma - separated list of selectors representing the union of
+                        all elements selected by each of the selectors in the list</p>
+                        <h3>Simple Selectors</h3>
+                        <ul>
+                          <li>type selector</li>
+                          <li>universal selector</li>
+                          <li>attribute selector</li>
+                          <li>class selector</li>
+                          <li>ID selector</li>
+                          <li>
+                            pseudo - class
+                            <ul>
+                              <li> 
+                                dynamic pseudo class
+                                <ul>
+                                  <li>
+                                    link pseudo - class
+                                    <ul>
+                                      <li>*</li>
+                                    </ul>
+                                    user action pseudo - classes
+                                    <ul>
+                                      <li>:hover</li>
+                                      <li>:active</li>
+                                      <li>:focus</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                target pseudo - class
+                                <ul>
+                                  <li>:target [css3]</li>
+                                </ul>
+                                language pseudo - class
+                                <ul>
+                                  <li>:lang()</li>
+                                </ul>
+                                UI element states pseudo - classes
+                                <ul>
+                                  <li>:enabled [css3]</li>
+                                  <li>:disabled [css3]</li>
+                                  <li>:checked [css3]</li>
+                                  <li>:indeterminate(css3)</li>
+                                </ul>
+                                structural pseudo - classes
+                                <ul>
+                                  <li>:root [css3]</li>
+                                  <li>:first-child</li>
+                                  <li>last-child [css3]</li>
+                                  <li>:only-child [css3]</li>
+                                  <li>:nth-child() [css3]</li>
+                                  <li>:nth-last-child() [css3]</li>
+                                  <li>:first-of-type [css3]</li>
+                                  <li>:last-of-type [css3]</li>
+                                  <li>:only-of-type [css3]</li>
+                                  <li>:nth-of-type() [css3]</li>
+                                  <li>:nth-last-of-type() [css3]</li>
+                                  <li>:empty [css3]</li>
+                                </ul>
+                                negation pseudo-class
+                                <ul>
+                                  <li>:not() [css3]</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            combinators
+                            <ul>
+                              <li>descendant combinators (whitespace, i.e., space, tab, line feed
+                                carriage return, form feed)</li>
+                              <li>child combinator(>)</li>
+                              <li>
+                                sibling combinators
+                                <ul>
+                                  <li>adjacent sibling combinator (+)</li>
+                                  <li>general sibling combinator (~) [css3]</li>
+                                </ul>
+                                pseudo - elements
+                                <ul>
+                                  <li>::first-letter [css3], :first-letter</li>
+                                  <li>::first-line [css3], :first-line</li>
+                                  <li>::before [css3], :before</li>
+                                  <li>::after [css3], :after</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pad_left1">
+                        <h2>CSS Rule Precedence</h2>
+                        <ul>
+                          <li>
+                            by origin and importance
+                            <ul>
+                              <li>user agent important declarations</li>
+                              <li>user important declarations</li>
+                              <li>author important declarations</li>
+                              <li>author normal declarations</li>
+                              <li>user normal declarations</li>
+                              <li>user agent normal declarations</li>
+                            </ul>
+                            by specifity
+                            <ul>
+                              <li>inline style</li>
+                              <li>number of ID selectors</li>
+                              <li>number of class selectors, attribute selectors, and pseudo - elements</li>
+                              <li>number of type selectors and pseudo - elements</li>
+                            </ul>
+                            by order
+                          </li>
+                        </ul>
+                      </div>
                     </article>
                     <article class="col2 pad_left2">
                       <div class="pad_left1">

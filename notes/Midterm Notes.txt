@@ -1,0 +1,69 @@
+* arrow syntax
+	var multiply = (a,b) => {return a*b;}
+	var product = multiply(10,20);
+	
+	var divide = (a,b) => a/b
+	var quotient = divide (10,20);
+	
+	var triple = n => 3*n;
+	var thrice = triple (5)
+	
+	var zero = () => 0;
+	
+* functions can be recursive
+	function factorial(n) {
+		if (n<0) {
+			throw "Invalid argument";
+		} else if (n==0) {
+			return 1;
+		} else {
+			return n*factorial(n-1);
+		}
+	}
+	
+* functions can be nested
+	function outer() {
+		//some codes here..
+		function inner() {
+		//inner code here..
+		}
+		//some codes here..
+	}
+	
+*'this', 'arguments', and 'apply'
+	function args() {
+		console.log(this);
+		console.log(arguments.length);
+		for (let i = 0; i<arguments.length; i++) {
+			console.log(arguments[i]);
+		}
+	}
+	
+args();
+args(1,2,3);
+args, apply('hi', [1,2,3,4]);
+
+function fn(a=10, b=20, c, d=40, e) {
+	console.log('a=${a}');
+	console.log('b=${b}');
+	console.log('c=${c}');
+	console.log('d=${d}');
+	console.log('e=${e}');
+}
+
+function fn(a,b,... others) {
+	console.log('a=${a}');
+	console.log('b=${b}');
+	console.log('others=   ', others);
+	
+* Arrays
+	var emptyArray = newArray();
+	var alsoEmptyArray = [];
+	
+	var arrayWithLengthFive = new Array(5);
+	var arrayWithOneElementWithValues = [5];
+	
+	var array = new Array('5');
+	var someArray = ['5'];
+	
+	var mixedElementTypes = [10, true, 'hello', newDate()];

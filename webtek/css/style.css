@@ -508,3 +508,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+dt {
+	font-weight: bold;
+}

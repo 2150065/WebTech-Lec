@@ -50,33 +50,39 @@
                   <div class="wrapper">
                     <article class="col1">
                     <div id="topic1">
-                            <h2> What is CSS? </h2>
+                            <button class="accordion"><h2> What is CSS? </h2></button>
+                            <div class="panel">
                               <p> Language used to specify presentation aspects (i.e., layout and formatting) of structurally marked up documents </p>
                               <p> Developed by Hakon Wium Lie (CHSS) and Bert Bos (SSP). </p>
                               <p> Governed by W3C </p>                        
-                     
+                            </div>
                       </div>
                       <div id="topic2">
-                          <h2>CSS Versions</h2>
+                          <button class="accordion"><h2>CSS Versions</h2></button>
+                          <div class="panel">
                           <ul>
                             <li>CSS 1 - December 17, 1996</li>
                             <li>CSS 2</li>
                             <li>CSS 2.1 - June 7, 2011</li>
                             <li>CSS 3</li>
                           </ul>
+                          </div>
                       </div>
  
                       <div id="topic3">
-                        <h2>CSS Preprocessors</h2>
+                        <button class="accordion"><h2>CSS Preprocessors</h2></button>
+                        <div class="panel">
                         <p>An extended CSS syntax that compiles into regular CSS.</p>
                         <ul>
                           <li>Sass (Syntactically Awesome Style Sheets)</li>
                           <li>Less</li>
                         </ul>
+                        </div>
                       </div>
  
                        <div id="topic4">
-                        <h2>CSS Frameworks</h2>
+                        <button class="accordion"><h2>CSS Frameworks</h2></button>
+                        <div class="panel">
                         <p>Allows easier web design.</p>
                         <ul>
                           <li>Boostrap</li>
@@ -84,10 +90,12 @@
                           <li>Materialize</li>
                           <li>Foundation</li>
                         </ul>
+                        </div>
                       </div>
  
                        <div id="topic5">
-                        <h2>CSS Statements</h2>
+                        <button class="accordion"><h2>CSS Statements</h2></button>
+                        <div class="panel">
                         <h3>At Rules</h3>
                         <ul>
                           <li>@charset - character set</li>
@@ -100,6 +108,7 @@
                           <li>@page - printed page</li>
                           <li>@supports - set of nested statements</li>
                         </ul>
+                        </div>
                       </div>
  
                        <div id="topic6">
@@ -227,7 +236,8 @@
  
                       <div id="topic7">
                         <h2>CSS Rule Precedence</h2>
-                        <h3>By origin and importance</h3>
+                        <button class="accordion"><h3>By origin and importance</h3></button>
+                        <div class="panel">
                             <ul>
                               <li>user agent important declarations</li>
                               <li>user important declarations</li>
@@ -236,20 +246,26 @@
                               <li>user normal declarations</li>
                               <li>user agent normal declarations</li>
                             </ul>
-                        <h3>By specifity</h3>
+                        </div>
+                        <button class="accordion"><h3>By specifity</h3></button>
+                        <div class="panel">
                             <ul>
                               <li>inline style</li>
                               <li>number of ID selectors</li>
                               <li>number of class selectors, attribute selectors, and pseudo - elements</li>
                               <li>number of type selectors and pseudo - elements</li>
                             </ul>
-                        <h3>By order</h3>
+                        </div>
+                        <button class="accordion"><h3>By order</h3></button>
                       </div>
                       <div id="topic8">
-                      <h2> CSS Declaration</h2>
+                      <button class="accordion"><h2> CSS Declaration</h2></button>
+                      <div class="panel">
                       <p> Surrounded by curly braces and consist of property name and a value separated by a colon, declaration blocks are separated by semicolons.</p>
-                      <h3> Declaration Block </h3>
-                      <h4> Properties </h4>
+                      <button class="accordion"><h3> Declaration Block </h3></button>
+                      <div class="panel">
+                      <h4 class="accordion"> Properties </h4>
+                      <div class="panel">
                       <ul>
                         <li>Margins, borders, padding</li>
                         <li>Colors and background</li>
@@ -259,7 +275,9 @@
                         <li>Positioning and dimensions</li>
                         <li>Miscellaneous</li>
                       </ul>
-                      <h4> Values </h4>
+                      </div>
+                      <h4 class="accordion"> Values </h4>
+                      <div class="panel">
                       <ul>
                         <li>Keywords</li>
                         <li>Numbers</li>
@@ -273,6 +291,9 @@
                         <li>Specified, computed, used, and actual values</li>
                         <li>Angles, time, frequencies, resolution</li>
                       </ul>
+                      </div>
+                      </div>
+                      </div>
                       </div>
                     </article>
                     <article class="col2 pad_left2">

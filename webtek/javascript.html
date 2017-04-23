@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/accordion.css" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/cufon-replace.js"></script>
@@ -51,91 +52,80 @@
                     <article class="col1">
                         
                       <div id="topic1">
-                            <h2> What is JavaScript? </h2>
+                            <button class="accordion"><h2> What is JavaScript? </h2></button>
+                            <div class="panel">
                             <p> Language used to specify the behavioral aspect (i.e., interactive effects) of a marked up document. </p>
+                            </div>
                       </div>
                        <div id="topic2">
-                            <h2> Ways to Associate JavaScript </h2>
+                            <button class="accordion"><h2> Ways to Associate JavaScript </h2></button>
+                            <div class="panel">
                             <dl>
-                            <dt>Externally linked </dt>
+                            <dt class="accordion">Externally linked </dt>
+                            <div class="panel">
                             <dd> Can be placed anywhere and can be multiple</dd>
-                            <dt>Embedded </dt>
+                            </div>
+                            <dt class="accordion">Embedded </dt>
+                            <div class="panel">
                             <dd> Not recommended </dd>
-                            <dt> Inline script </dt>
+                            </div>
+                            <dt class="accordion"> Inline script </dt>
+                            <div class="panel">
                             <dd> Event attributes (i.e., "on" + click)
+                            </div>
                             </dl>
+                            </div>
                       </div>
                       <div id="topic3">
-                            <h2> JavaScript Elements </h2>
-                            <h3> Finding HTML Element by Id </h3>
-                                <p> This example finds the element with id="main": </p>
-                                <table>
-                                <tr>
-                                <th>var theElement = document.getElementById("main");</th>
-                                </tr>
-                                </table>
-                            <h3> Finding HTML Element by Tag Name </h3>
-                                <p> This example finds all &lt;p&gt; elements: </p>
-                                <table>
-                                <tr>
-                                <th>var a = document.getElementByTagName("p");</th>
-                                </tr>
-                                </table>
-                            <h3> Finding HTML Element by Class Name </h3>
-                                <p> This finds all HTML elements with the same class name. </p>
-                                <p> This example returns a list of all elements with class="start".  </p>
-                                <table>
-                                <tr>
-                                <th>var a = document.getElementByClassName("start");</th>
-                                </tr>
-                                </table>
-                            <h3> Finding HTML Element by CSS Selectors </h3>
-                                <p> This finds all HTML elements that has the same specified CSS selector. </p>
-                                <p> This example returns a list of all &lt;p&gt; elements with class="main".
-                                <table>
-                                <tr>
-                                <th>var a = document.querySelectorAll("p.main");</th>
-                                </tr>
-                                </table>
-                            <h3> Finding HTML Element by HTML Object Collections </h3>
-                                <p> This example finds the form element with id="form1" in the forms collection. </p>
-                                <table>
-                                <tr>
-                                <th>var a = document.forms["form1"];</th>
-                                </tr>
-                                </table>
+                            <button class="accordion"><h2> JavaScript Elements </h2></button>
+                            <div class="panel">
+                                
+                            </div>
                             
                       </div>
                       <div id="topic4">
-                            <h2> JavaScript Attributes </h2>
+                            <button class="accordion"><h2> JavaScript Attributes </h2></button>
+                            <div class="panel">
+                                
+                            </div>
                             
                       </div>
                       <div id="topic5">
                             <h2> JavaScript Data Types </h2>
                             <ul>
-                            <h3> Simple/Primitive Types</h3>
+                            <button class="accordion"><h3> Simple/Primitive Types</h3></button>
+                            <div class="panel">
                               <dl>
-                                <dt> Boolean (true / false) </dt>
+                                <dt class="accordion"> Boolean (true / false) </dt>
+                                <div class="panel">
                                 <dd> Falsy - not exactly false but is equal to false. </dd>
                                 <dd> Truthy - not exactly true but is equal to true. </dd>
-                                <dt> Numbers </dt>
+                                </div>
+                                <dt class="accordion"> Numbers </dt>
+                                <div class="panel">
                                 <dd> Integers and decimals</dd>
                                 <dd> 0b - binary types </dd>
                                 <dd> 0 - octal notation </dd>
                                 <dd> 0x - hexadecimal </dd>
                                 <dd> 1e5 - exponential </dd>
                                 <dd> Always floating point division </dd>
-                                <dt> Strings </dt>
+                                </div>
+                                <dt class="accordion"> Strings </dt>
+                                <div class="panel">
                                 <dd> "" , '' - delimit strings
                                 <dd> can be embedded - " ' ' "</dd>
                                 <dd> String interpolation - ` ` (evaluate)</dd>
+                                </div>
                                 <dt> Undefined </dt>
                                 <dt> Null </dt>
                               </dl>
-                            <h3> Object Types </h3>
+                            </div>
+                            <button class="accordion"><h3> Object Types </h3></button>
+                            <div class="panel">
                             <dl>
                             <dt> Standard Objects </dt>
-                            <dt> Mutator Methods </dt>
+                            <dt class="accordion"> Mutator Methods </dt>
+                            <div class="panel">
                             <dd> Used to control changes to a variable </dd>
                             <ul>
                             	<li>copyWithin()</li>
@@ -148,11 +138,11 @@
                             	<li>splice()</li>
                             	<li>unshift()</li>
                             </ul>
-                            <dt> Accessor Methods </dt>
+                            </div>
+                            <dt class="accordion"> Accessor Methods </dt>
+                            <div class="panel">
                             <dd> Do not affect or modify variables. </dd>
-                            <dt> Iterators </dt>
                             <dd> Accessing methods from a collection one at a time.</dd>
-                            <dd> Does not change the array </dd>
                             <ul>
                             	<li>concat()</li>
                             	<li>indexOf()</li>
@@ -162,7 +152,9 @@
                             	<li>toString()</li>
                             	<li>toLocaleString()</li>
                             </ul>
-                            <dt> Iteration Methods </dt>
+                            </div>
+                            <dt class="accordion"> Iteration Methods </dt>
+                            <div class="panel">
                             <dd> </dd>
                             <ul>
                             	<li>entries()</li>
@@ -181,6 +173,8 @@
                             </dl>
 
                             </ul>
+                            </div>
+                            </div>
                       </div>
                       
                     </article>
@@ -203,6 +197,7 @@
     </div>
     </div>
   <script src="js/test.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 </html>
 

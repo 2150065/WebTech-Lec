@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/accordion.css" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/cufon-replace.js"></script>
     <script type="text/javascript" src="js/Molengo_400.font.js"></script>
     <script type="text/javascript" src="js/Expletus_Sans_400.font.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" href="js/accordion.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <style type="text/css">.bg, .box2{behavior:url("js/PIE.htc");}</style>
@@ -50,24 +52,38 @@
                   <div class="wrapper">
                     <article class="col1">
                         <div id="topic1">
-                       
-                        <h2>HTTP runs on top of TCP/IP</h2>
-                        <p>Using TCP port 80 by default or TCP port 443 for HTTPS (HTTP over SSL/TLS) </p>
-                        <p>IANA, ICANN</p>
 
-                        <h2>HTTP is based on a client server architecture</h2>
-                        <p>Client (aka User Agents) i.e., web browsers, web crawlers, and other end user tools and applications</p>
-                        <p>Servers i.e., origin servers, proxy servers, gateway</p>
+                        <button class="accordion"><h2>HTTP runs on top of TCP/IP</h2></button>
 
-                        <h2>HTTP uses a request-response standard protocol</h2>
-                        <p>The client sends an HTTP request message to the server</p>
-                          <p>The server processes the request and replies with an HTTP response message</p>
+                        <div class="panel">
+                            <p>Using TCP port 80 by default or TCP port 443 for HTTPS (HTTP over SSL/TLS) </p>
+                            <p>IANA, ICANN</p>
+                        </div>
 
-                            <h2>HTTP is a stateless communications protocol</h2>
+                        <button class="accordion"><h2>HTTP is based on a client server architecture</h2></button>
+
+                        <div class="panel">
+                            <p>Client (aka User Agents) i.e., web browsers, web crawlers, and other end user tools and applications</p>
+                            <p>Servers i.e., origin servers, proxy servers, gateway</p>
+                        </div>
+
+                        <button class="accordion"><h2>HTTP uses a request-response standard protocol</h2></button>
+
+                        <div class="panel">
+                            <p>The client sends an HTTP request message to the server</p>
+                            <p>The server processes the request and replies with an HTTP response message</p>
+                        </div>
+
+                        <button class="accordion"><h2>HTTP is a stateless communications protocol</h2></button>
+
+                        <div class="panel">
                             <p>Servers do not keep information about client in between requests</p>
                             <p>Serve and Forget</p>
+                        </div>    
 
-                            <h2>HTTP provides aupport for other funtionalities</h2>
+                        <button class="accordion"><h2>HTTP provides aupport for other funtionalities</h2></button>
+                            
+                        <div class="panel">    
                             <ol type="1">
                                 <li> Cache control </li>
                                 <li> Content media type (MIME) specification </li>
@@ -78,6 +94,8 @@
                                 <li> Request pipelining </li>
                                 <li> Authentication/Authorization </li>
                             </ol>
+                        </div>
+                          
                         </div>
                       
                         <div id="topic2">
@@ -244,6 +262,7 @@
     </div>
     </div>
   <script src="js/test.js"></script>
+  <script src="js/accordion.js"></script>
 <!--</div>-->
 </body>
 </html>

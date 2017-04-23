@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/accordion.css" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/cufon-replace.js"></script>
     <script type="text/javascript" src="js/Molengo_400.font.js"></script>
     <script type="text/javascript" src="js/Expletus_Sans_400.font.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+    <script type="text/javascript" href="js/accordion.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <style type="text/css">.bg, .box2{behavior:url("js/PIE.htc");}</style>
@@ -102,56 +104,78 @@
  
                        <div id="topic6">
                         <h2>CSS Selectors</h2>
-                        <h3>Selectors</h3>
+                        <button class="accordion"><h3>Selectors</h3></button>
+                        <div class="panel">
                         <p>Patterns used to target elements</p>
-                        <h3>Selector Syntax</h3>
-                        <p>Chain of one or more sequences of simple selectors separated by
-                        combinators, with one pseudo-element possibly appended to the
-                        last sequence</p>
-                        <h3>Sequence of Simple Selectors</h3>
+                        </div>
+                        <button class="accordion"><h3>Selector Syntax</h3></button>
+                        <div class="panel">
+                          <p>Chain of one or more sequences of simple selectors separated by
+                          combinators, with one pseudo-element possibly appended to the
+                          last sequence</p>
+                        </div>
+                        <button class="accordion"><h3>Sequence of Simple Selectors</h3></button>
+                        <div class="panel">
                         <ul>
                           <li>Chain of simple selectors not separated by combinators</li>
                           <li>Always starts with a type selector or a universal selector</li>
                           <li>Cannot contain other type selectors or universal selectors</li>
                         </ul>
-                        <h3>Group of Selectors</h3>
+                        </div>
+                        <button class="accordion"><h3>Group of Selectors</h3></button>
+                        <div class="panel">
                         <p>Comma - separated list of selectors representing the union of
                         all elements selected by each of the selectors in the list</p>
-                        <h3>Simple Selectors</h3>
+                        </div>
+                        <button class="accordion"><h3>Simple Selectors</h3></button>
+                        <div class="panel">
                           <h4>type selector</h4>
                           <h4>universal selector</h4>
                           <h4>attribute selector</h4>
                           <h4>class selector</h4>
                           <h4>ID selector</h4>
-                          <h4>pseudo - class</h4>
-                                <h4>dynamic pseudo class</h4>
-                                    <h4>link pseudo - class</h4>
+                          <h4 class="accordion">pseudo - class</h4>
+                          <div class="panel">
+                                <h4 class="accordion">dynamic pseudo class</h4>
+                                <div class="panel">
+                                    <h4 class="accordion">link pseudo - class</h4>
+                                    <div class="panel">
                                     <ul>
                                       <li>:link</li>
                                       <li>:visited</li>
                                     </ul>
-                                    <br><h4>user action pseudo - classes</h4>
-                                    <ul>
+                                    </div>
+                                    <h4 class="accordion">user action pseudo - classes</h4>
+                                    <div class="panel">                                    <ul>
                                       <li>:hover</li>
                                       <li>:active</li>
                                       <li>:focus</li>
                                     </ul>
-                                <br><h4>target pseudo - class</h4>
+                                    </div>
+                                </div>
+                                <h4 class="accordion">target pseudo - class</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>:target [css3]</li>
                                 </ul>
-                                <br><h4>language pseudo - class</h4>
+                                </div>
+                                <h4 class="accordion">language pseudo - class</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>:lang()</li>
                                 </ul>
-                                <br><h4>UI element states pseudo - classes</h4>
+                                </div>
+                                <h4 class="accordion">UI element states pseudo - classes</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>:enabled [css3]</li>
                                   <li>:disabled [css3]</li>
                                   <li>:checked [css3]</li>
                                   <li>:indeterminate(css3)</li>
                                 </ul>
-                                <br><h4>structural pseudo - classes</h4>
+                                </div>
+                                <h4 class="accordion">structural pseudo - classes</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>:root [css3]</li>
                                   <li>:first-child</li>
@@ -166,27 +190,38 @@
                                   <li>:nth-last-of-type() [css3]</li>
                                   <li>:empty [css3]</li>
                                 </ul>
-                                <br><h4>negation pseudo-class</h4>
+                                </div>
+                                <h4 class="accordion">negation pseudo-class</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>:not() [css3]</li>
                                 </ul>
-                            <br><h4>combinators</h4>
+                                </div>
+                                </div>
+                            <h4 class="accordion">combinators</h4>
+                            <div class="panel">
                             <ul>
                               <li>descendant combinators (whitespace, i.e., space, tab, line feed
                                 carriage return, form feed)</li>
                               <li>child combinator(>)</li>
-                                <br><h4>sibling combinators</h4>
+                                <h4 class="accordion">sibling combinators</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>adjacent sibling combinator (+)</li>
                                   <li>general sibling combinator (~) [css3]</li>
                                 </ul>
-                                <br><h4>pseudo - elements</h4>
+                                </div>
+                                <h4 class="accordion">pseudo - elements</h4>
+                                <div class="panel">
                                 <ul>
                                   <li>::first-letter [css3], :first-letter</li>
                                   <li>::first-line [css3], :first-line</li>
                                   <li>::before [css3], :before</li>
                                   <li>::after [css3], :after</li>
                                 </ul>
+                                </div>
+                                </div>
+                          </div>
                       </div>
 
  
@@ -261,6 +296,7 @@
         </div>
     </div>
 <script src="js/test.js"></script>
+<script src="js/accordion.js"></script>
 </body>
 </html>
 

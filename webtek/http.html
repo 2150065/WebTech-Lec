@@ -99,7 +99,8 @@
                         </div>
                       
                         <div id="topic2">
-                            <h2> HTTP Resource Addressing </h2>
+                        <button class="accordion"><h2> HTTP Resource Addressing </h2></button>
+                            <div class="panel">
 								<ul>
 									<li> scheme </li>
 									<li> authority </li>
@@ -107,9 +108,12 @@
 									<li> query </li>
 									<li> fragmentt identifier </li>
 								</ul>
+                            </div>    
                         </div>
+
                         <div id="topic3">
-                            <h2> HTTP Request Methods </h2>
+                        <button class="accordion"><h2> HTTP Request Methods </h2></button>
+                            <div class="panel">
 								<ul>
 									<li> GET  </li>
 									<li> HEAD </li>
@@ -121,9 +125,12 @@
 									<li> CONNECT </li>
 									<li>The methods GET, HEAD, PUT and DELETE share this property. </li>
 								</ul>
+                            </div>    
                         </div>
+
                         <div id="topic4">
-                            <h2> General Header Fields  </h2>
+                        <button class="accordion"><h2> General Header Fields  </h2></button>
+                            <div class="panel">
 								<ul>
 									<li> Cache-control  </li>
 									<li> Connection  </li>
@@ -135,39 +142,48 @@
 									<li> Via </li>
 									<li>Warning </li>
 								</ul>
+                            </div>    
                         </div>
+
                         <div id="topic5">
-                           <h2> Request Header Fields   </h2>
-									 <ul>
-										<li> Accept  </li>
-										<li> Accept-charset  </li>
-										<li> Accept-encoding </li>
-										<li> Accept-Language </li>
-										<li> Authorization  </li>
-										 <li> Transfer-encoding   </li>
-										<li> Expect </li>
-										<li> If-Match </li>
-										 <li>If-Modified-Since </li>
-										 <li> From </li>
-										 <li> Host</li>
-									 </ul>
+                        <button class="accordion"><h2> Request Header Fields </h2></button>
+                            <div class="panel">
+								<ul>
+									<li> Accept  </li>
+									<li> Accept-charset  </li>
+									<li> Accept-encoding </li>
+									<li> Accept-Language </li>
+									<li> Authorization  </li>
+									<li> Transfer-encoding   </li>
+									<li> Expect </li>
+									<li> If-Match </li>
+									<li>If-Modified-Since </li>
+									<li> From </li>
+									<li> Host</li>
+								</ul>
+                            </div>    
                         </div>
+
                         <div id="topic6">
-                             <h2> Response Header Fields   </h2>
-									<ul>
-										<li> Accept-ranges </li>
-										<li> Age  </li>
-										<li> Etag </li>
-										<li> Location </li>
-										<li> Proxy-Authenticate  </li>
-										<li> Retry-After   </li>
-										<li> Server </li>
-										<li> Vary </li>
-										<li> WWW-authenticate </li>
-									</ul>
+                        <button class="accordion"><h2> Response Header Fields </h2></button>
+                            <div class="panel">
+								<ul>
+									<li> Accept-ranges </li>
+									<li> Age  </li>
+									<li> Etag </li>
+									<li> Location </li>
+									<li> Proxy-Authenticate  </li>
+									<li> Retry-After   </li>
+									<li> Server </li>
+									<li> Vary </li>
+									<li> WWW-authenticate </li>
+								</ul>
+                            </div>        
                         </div>
+
                         <div id="topic7">
-                            <h2> Entity Header Fields   </h2>
+                        <button class="accordion"><h2> Entity Header Fields </h2></button>
+                            <div class="panel">
 								<ul>
 									<li> Allow </li>
 									<li> Content-encoding  </li>
@@ -180,65 +196,81 @@
 									<li> Expires </li>
 									<li> Last Modified </li>
 								</ul>
+                            </div>    
                         </div>
+
                         <div id="topic8">
                             <h2>HTTP Status Codes </h2>
  
- <ul>
- <h4> Informational (1xx) </h4>
- 	<li> 100 Continue </li>
- 	<li> 101 Switching Protocols </li>
- </ul>
- <ul>
- <h4> Success (2xx) </h4>
- 	<li> 200 OK </li>
- 	<li> 202 Accepted </li>
- 	<li> 203 Non-Authoritative Information </li>
- 	<li> 204 No Content </li>
- 	<li> 205 Reset Content </li>
- 	<li> 206 Partial Content </li>
- </ul>
- 
- <ul> 
- <h4> Redirection (3xx) </h4>
- 	<li> 300 Multiple Choices </li>
- 	<li> 301 Moved Permanently </li>
- 	<li> 302 Found </li>
- 	<li> 303 See Other </li>
- 	<li> 304 Not Modified </li>
-	<li> 305 Use Proxy </li>
- 	<li> 306 (Unused) </li>
- 	<li> 307 Temporary Redirect </li>
- </ul>
- <ul>
- <h4> Client Error (4xx) </h4>
- 	<li> 400 Bad Request </li>
- 	<li> 401 Unauthorized </li>
- 	<li> 402 Payment Required </li>
- 	<li> 403 Forbidden </li>
- 	<li> 404 Not Found </li>
-	<li> 405 Method not Allowed </li>
- 	<li> 406 Not Acceptable </li>
- 	<li> 407 Proxy Authentication Required </li>
- 	<li> 408 Request Timeout </li>
- 	<li> 409 Conflict </li>
- 	<li> 410 Gone </li>
- 	<li> 411 Length Required </li>
- 	<li> 412 Precondition Failed </li>
- 	<li> 413 Request Entity Too Large </li>
- 	<li> 414 Request-URI Too Long </li>
- 	<li> 415 Unsupported Media Type </li>
- 	<li> 416 Request Range Not Satisfiable </li>
- 	<li> 417 Expectation Failed </li>
- </ul>
- <ul>
- <h4> Server Error (5xx) </h4>
- 	<li> 500 Internal Server Error
- 	<li> 501 Not Implemented
- 	<li> 502 Bad Gateway
- 	<li> 503 Service Unavailable
- 	<li> 504 Gateway Timeout
- 	<li> 505 HTTP Version Not Supported
+                                <button class="accordion"><h4> Informational (1xx) </h4></button>
+                                <div class="panel">
+                                 <ul>
+                                 	<li> 100 Continue </li>
+                                 	<li> 101 Switching Protocols </li>
+                                 </ul>
+                                 </div>
+
+                                <button class="accordion"> <h4> Success (2xx) </h4></button>
+                                <div class="panel">
+                                 <ul>
+                                 	<li> 200 OK </li>
+                                 	<li> 202 Accepted </li>
+                                 	<li> 203 Non-Authoritative Information </li>
+                                 	<li> 204 No Content </li>
+                                 	<li> 205 Reset Content </li>
+                                 	<li> 206 Partial Content </li>
+                                 </ul>
+                                 </div>
+
+                                 <button class="accordion"> <h4> Redirection (3xx) </h4></button>
+                                 <div class="panel">
+                                 <ul> 
+                                 	<li> 300 Multiple Choices </li>
+                                 	<li> 301 Moved Permanently </li>
+                                 	<li> 302 Found </li>
+                                 	<li> 303 See Other </li>
+                                 	<li> 304 Not Modified </li>
+                                	<li> 305 Use Proxy </li>
+                                 	<li> 306 (Unused) </li>
+                                 	<li> 307 Temporary Redirect </li>
+                                 </ul>
+                                 </div>
+
+                                <button class="accordion">  <h4> Client Error (4xx) </h4></button>
+                                <div class="panel">
+                                 <ul>
+                                 	<li> 400 Bad Request </li>
+                                 	<li> 401 Unauthorized </li>
+                                 	<li> 402 Payment Required </li>
+                                 	<li> 403 Forbidden </li>
+                                 	<li> 404 Not Found </li>
+                                	<li> 405 Method not Allowed </li>
+                                 	<li> 406 Not Acceptable </li>
+                                 	<li> 407 Proxy Authentication Required </li>
+                                 	<li> 408 Request Timeout </li>
+                                 	<li> 409 Conflict </li>
+                                 	<li> 410 Gone </li>
+                                 	<li> 411 Length Required </li>
+                                 	<li> 412 Precondition Failed </li>
+                                 	<li> 413 Request Entity Too Large </li>
+                                 	<li> 414 Request-URI Too Long </li>
+                                 	<li> 415 Unsupported Media Type </li>
+                                 	<li> 416 Request Range Not Satisfiable </li>
+                                 	<li> 417 Expectation Failed </li>
+                                 </ul>
+                                </div>
+
+                                <button class="accordion"> <h4> Server Error (5xx) </h4></button>
+                                <div class="panel">
+                                 <ul>
+                                 	<li> 500 Internal Server Error </li>
+                                 	<li> 501 Not Implemented </li>
+                                 	<li> 502 Bad Gateway </li>
+                                 	<li> 503 Service Unavailable </li>
+                                 	<li> 504 Gateway Timeout </li>
+                                 	<li> 505 HTTP Version Not Supported </li>
+                                </ul>
+                                </div>    
                 </div>
                     </article>
                     <article class="col2 pad_left2">

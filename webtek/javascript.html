@@ -67,6 +67,43 @@
                       </div>
                       <div id="topic3">
                             <h2> JavaScript Elements </h2>
+                            <h3> Finding HTML Element by Id </h3>
+                                <p> This example finds the element with id="main": </p>
+                                <table>
+                                <tr>
+                                <th>var theElement = document.getElementById("main");</th>
+                                </tr>
+                                </table>
+                            <h3> Finding HTML Element by Tag Name </h3>
+                                <p> This example finds all &lt;p&gt; elements: </p>
+                                <table>
+                                <tr>
+                                <th>var a = document.getElementByTagName("p");</th>
+                                </tr>
+                                </table>
+                            <h3> Finding HTML Element by Class Name </h3>
+                                <p> This finds all HTML elements with the same class name. </p>
+                                <p> This example returns a list of all elements with class="start".  </p>
+                                <table>
+                                <tr>
+                                <th>var a = document.getElementByClassName("start");</th>
+                                </tr>
+                                </table>
+                            <h3> Finding HTML Element by CSS Selectors </h3>
+                                <p> This finds all HTML elements that has the same specified CSS selector. </p>
+                                <p> This example returns a list of all &lt;p&gt; elements with class="main".
+                                <table>
+                                <tr>
+                                <th>var a = document.querySelectorAll("p.main");</th>
+                                </tr>
+                                </table>
+                            <h3> Finding HTML Element by HTML Object Collections </h3>
+                                <p> This example finds the form element with id="form1" in the forms collection. </p>
+                                <table>
+                                <tr>
+                                <th>var a = document.forms["form1"];</th>
+                                </tr>
+                                </table>
                             
                       </div>
                       <div id="topic4">
@@ -113,7 +150,9 @@
                             </ul>
                             <dt> Accessor Methods </dt>
                             <dd> Do not affect or modify variables. </dd>
+                            <dt> Iterators </dt>
                             <dd> Accessing methods from a collection one at a time.</dd>
+                            <dd> Does not change the array </dd>
                             <ul>
                             	<li>concat()</li>
                             	<li>indexOf()</li>

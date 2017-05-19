@@ -119,23 +119,23 @@
                         <button class="accordion"><h2> HTTP Request Methods </h2></button>
                             <div class="panel">
                                 <dt>GET</dt>
-                                    <dd>Requests a representation of the specified resource. Requests using GET should only retrieve data.</dd>
+                                    <dd>- requests a representation of the specified resource. Requests using GET should only retrieve data.</dd>
                                 <dt>HEAD</dt>
-                                    <dd>Asks for a response identical to that of a GET request, but without the response body.</dd> 
+                                    <dd>- asks for a response identical to that of a GET request, but without the response body.</dd> 
                                 <dt>POST</dt>   
-                                    <dd>Used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</dd>
+                                    <dd>- used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</dd>
                                 <dt>PUT</dt>
-                                    <dd>Replaces all current representations of the target resource with the request payload.</dd>
+                                    <dd>- replaces all current representations of the target resource with the request payload.</dd>
                                 <dt>DELETE</dt>
-                                    <dd>Deletes the specified resource.</dd>
+                                    <dd>- deletes the specified resource.</dd>
                                 <dt>CONNECT</dt>
-                                    <dd>Establishes a tunnel to the server identified by the target resource.</dd>
+                                    <dd>- establishes a tunnel to the server identified by the target resource.</dd>
                                 <dt>OPTIONS</dt>
-                                    <dd>Used to describe the communication options for the target resource.</dd>
+                                    <dd>- used to describe the communication options for the target resource.</dd>
                                 <dt>TRACE</dt>
-                                    <dd>Performs a message loop-back test along the path to the target resource.</dd>
+                                    <dd>- performs a message loop-back test along the path to the target resource.</dd>
                                 <dt>PATCH</dt>
-                                    <dd>Used to apply partial modifications to a resource.</dd> <br>
+                                    <dd>- used to apply partial modifications to a resource.</dd> <br>
 
                                  <p>Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</p>                   
 
@@ -145,71 +145,114 @@
                         <div id="topic4">
                         <button class="accordion"><h2> General Header Fields  </h2></button>
                             <div class="panel">
-								<ul>
-									<li> Cache-control  </li>
-									<li> Connection  </li>
-									<li> Date </li>
-									<li> Pragma </li>
-									<li> Trailer </li>
-									<li> Transfer-encoding   </li>
-									<li> Upgrade   </li>
-									<li> Via </li>
-									<li>Warning </li>
-								</ul>
+                                <dt>Cache-Control</dt>
+                                    <dd>- used to specify directives that must be obeyed by all caching mechanisms along the request/response chain.</dd>
+                                <dt>Connection</dt>
+                                    <dd>- allows the sender to specify options that are desired for that particular connection and must not be communicated by proxies over further connections.</dd>
+                                <dt>Date</dt>
+                                    <dd>- represents the date and time at which the message was originated.</dd>
+                                <dt>Pragma</dt>
+                                    <dd>- used to include implementation- specific directives that might apply to any recipient along the request/response chain.</dd>
+                                <dt>Trailer</dt>
+                                    <dd>- indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding.</dd>
+                                <dt>Transfer-Encoding</dt>
+                                    <dd>- indicates what type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient.</dd>
+                                <dt>Upgrade</dt>
+                                    <dd>- allows the client to specify what additional communication protocols it supports and would like to use if the server finds it appropriate to switch protocols.</dd>
+                                <dt>Via</dt>
+                                    <dd>- must be used by gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, and between the origin server and the client on responses.</dd>
+                                <dt>Warning</dt>
+                                    <dd>- used to carry additional information about the status or transformation of a message which might not be reflected in the message.</dd> <br>
+
+                                <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>                             
+			
                             </div>    
                         </div>
 
                         <div id="topic5">
                         <button class="accordion"><h2> Request Header Fields </h2></button>
                             <div class="panel">
-								<ul>
-									<li> Accept  </li>
-									<li> Accept-charset  </li>
-									<li> Accept-encoding </li>
-									<li> Accept-Language </li>
-									<li> Authorization  </li>
-									<li> Transfer-encoding   </li>
-									<li> Expect </li>
-									<li> If-Match </li>
-									<li>If-Modified-Since </li>
-									<li> From </li>
-									<li> Host</li>
-								</ul>
+                                <dt> Accept</dt>
+                                    <dd>- used to specify certain media types which are acceptable for the response.</dd>
+                                <dt> Accept-Charset </dt>
+                                    <dd>- used to indicate what character sets are acceptable for the response.</dd>
+                                <dt> Accept-Encoding </dt>
+                                    <dd>- similar to Accept, but restricts the content-codings that are acceptable in the response.</dd>
+                                <dt> Accept-Language </dt>
+                                    <dd>- similar to Accept, but restricts the set of natural languages that are preferred as a response to the request.</dd> 
+                                <dt> Authorization </dt>
+                                    <dd>- consists of credentials containing the authentication information of the user agent for the realm of the resource being requested.</dd>
+                                <dt> Expect </dt>
+                                    <dd>- used to indicate that particular server behaviors are required by the client.</dd>
+                                <dt> From </dt>
+                                    <dd>- contains an Internet e-mail address for the human user who controls the requesting user agent.</dd>
+                                <dt> Host </dt>
+                                    <dd>- specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource</dd>
+                                <dt> If-Match </dt>
+                                    <dd>- used with a method to make it conditional.</dd> 
+                                <dt> If-Modified-Since </dt>
+                                    <dd>- used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body.</dd>
+                                <dt> If-None-Match</dt>   
+                                    <dd>- used with a method to make it conditional.</dd> <br>
+
+                                <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>                             
+
                             </div>    
                         </div>
 
                         <div id="topic6">
                         <button class="accordion"><h2> Response Header Fields </h2></button>
                             <div class="panel">
-								<ul>
-									<li> Accept-ranges </li>
-									<li> Age  </li>
-									<li> Etag </li>
-									<li> Location </li>
-									<li> Proxy-Authenticate  </li>
-									<li> Retry-After   </li>
-									<li> Server </li>
-									<li> Vary </li>
-									<li> WWW-authenticate </li>
-								</ul>
+                                <dt> Accept-Ranges </dt>
+                                    <dd>- allows the server to indicate its acceptance of range requests for a resource.</dd>
+                                <dt> Age </dt>
+                                    <dd>- conveys the sender's estimate of the amount of time since the response was generated at the origin server.</dd>
+                                <dt> ETag </dt>
+                                    <dd>- provides the current value of the entity tag for the requested variant.</dd>
+                                <dt> Location </dt>
+                                    <dd>- used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource.</dd> 
+                                <dt> Proxy-Authenticate </dt>
+                                    <dd>- consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy for this Request-URI.</dd>
+                                <dt> Retry-After </dt>
+                                    <dd>- used with a 503 (Service Unavailable) response to indicate how long the service is expected to be unavailable to the requesting client.</dd>
+                                <dt> Server </dt>
+                                    <dd>- indicates what extension transfer-codings it is willing to accept in the response and whether or not it is willing to accept trailer fields in a chunked transfer-coding.</dd>
+                                <dt> Vary </dt>
+                                    <dd>- indicates the set of request-header fields that fully determines, while the response is fresh, whether a cache is permitted to use the response to reply to a subsequent request without revalidation.</dd>  
+                                <dt> WWW-Authenticate </dt>
+                                    <dd>- consists of at least one challenge that indicates the authentication scheme(s) and parameters applicable to the Request-URI.</dd> <br>
+
+                                <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>              
+
                             </div>        
                         </div>
 
                         <div id="topic7">
                         <button class="accordion"><h2> Entity Header Fields </h2></button>
                             <div class="panel">
-								<ul>
-									<li> Allow </li>
-									<li> Content-encoding  </li>
-									<li> Content-language </li>
-									<li> Content-length </li>
-									<li> Content-location  </li>
-									<li> Content MDS   </li>
-									<li> Content-range </li>
-									<li> Content-type </li>
-									<li> Expires </li>
-									<li> Last Modified </li>
-								</ul>
+                                <dt> Allow </dt>
+                                    <dd>- lists the set of methods supported by the resource identified by the Request-URI.</dd>
+                                <dt> Content-Encoding </dt>
+                                    <dd>- used as a modifier to the media-type.</dd>
+                                <dt> Content-Language </dt>
+                                    <dd>- describes the natural language(s) of the intended audience for the enclosed entity.</dd>
+                                <dt> Content-Length </dt>
+                                    <dd>- indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.</dd>
+                                <dt> Content-Location </dt>
+                                    <dd>- may be used to supply the resource location for the entity enclosed in the message when that entity is accessible from a location separate from the requested resource's URI.</dd>   
+                                <dt> Content-MD5 </dt>
+                                    <dd>- is an MD5 digest of the entity-body for the purpose of providing an end-to-end message integrity check (MIC) of the entity-body. </dd>
+                                <dt> Content-Range </dt>
+                                    <dd>- is sent with a partial entity-body to specify where in the full entity-body the partial body should be applied.</dd>
+                                <dt>Content-Type</dt>
+                                    <dd>- indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.</dd>
+                                <dt> Expires </dt>
+                                    <dd>- Gives the date/time after which the response is considered stale.</dd>
+                                <dt> Last Modified </dt>
+                                    <dd>- indicates the date and time at which the origin server believes the variant was last modified.</dd> <br>
+
+                                <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>  
+                                             
                             </div>    
                         </div>
 

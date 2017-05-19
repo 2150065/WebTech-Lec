@@ -102,30 +102,43 @@
                         <div id="topic2">
                         <button class="accordion"><h2> HTTP Resource Addressing </h2></button>
                             <div class="panel">
-								<ul>
-									<li> scheme </li>
-									<li> authority </li>
-									<li> path to resource </li>
-									<li> query </li>
-									<li> fragmentt identifier </li>
-								</ul>
+                                <p>URI syntax comprises of:</p>
+								
+									<p> The scheme, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:). </p>
+									<p> An authority part which consist of an optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@).</p>
+									<p> Path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one. </p>
+									<p> An optional query, separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. </p>
+									<p> An optional fragment, separated from the preceding part by a hash (#). </p>
+
+                                    <p>Reference: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier</p>
+								
                             </div>    
                         </div>
 
                         <div id="topic3">
                         <button class="accordion"><h2> HTTP Request Methods </h2></button>
                             <div class="panel">
-								<ul>
-									<li> GET  </li>
-									<li> HEAD </li>
-									<li> POST  </li>
-									<li> OPTIONS  </li>
-									<li> TRACE </li>
-									<li> PUT  </li>
-									<li> DELETE   </li>
-									<li> CONNECT </li>
-									<li>The methods GET, HEAD, PUT and DELETE share this property. </li>
-								</ul>
+                                <dt>GET</dt>
+                                    <dd>Requests a representation of the specified resource. Requests using GET should only retrieve data.</dd>
+                                <dt>HEAD</dt>
+                                    <dd>Asks for a response identical to that of a GET request, but without the response body.</dd> 
+                                <dt>POST</dt>   
+                                    <dd>Used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</dd>
+                                <dt>PUT</dt>
+                                    <dd>Replaces all current representations of the target resource with the request payload.</dd>
+                                <dt>DELETE</dt>
+                                    <dd>Deletes the specified resource.</dd>
+                                <dt>CONNECT</dt>
+                                    <dd>Establishes a tunnel to the server identified by the target resource.</dd>
+                                <dt>OPTIONS</dt>
+                                    <dd>Used to describe the communication options for the target resource.</dd>
+                                <dt>TRACE</dt>
+                                    <dd>Performs a message loop-back test along the path to the target resource.</dd>
+                                <dt>PATCH</dt>
+                                    <dd>Used to apply partial modifications to a resource.</dd> <br>
+
+                                 <p>Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</p>                   
+
                             </div>    
                         </div>
 

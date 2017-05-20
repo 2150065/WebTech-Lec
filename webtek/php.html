@@ -164,10 +164,13 @@
                                 </div>
 							<h3 class="accordion">$_FILES</h3>
                             <div class="panel">
-                                <p>An associative array that contains items that are uploaded via HTTP POST method</p>
+                                <p>An associative array that contains items that are uploaded via HTTP POST method: Basic usage: </p>
                                 <table>
                                 <tr>
-                                <th></th>
+                                <th>$_FILES["fileToUpload"]["name"];</th>
+                                </tr>
+								<tr>
+                                <th>$_FILES["fileToUpload"]["size"];</th>
                                 </tr>
                                 </table>
                                 </div>

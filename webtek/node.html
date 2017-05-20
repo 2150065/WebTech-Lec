@@ -85,64 +85,60 @@
                             <p>Serve and Forget</p>
                         </div>    
 
-                        <button class="accordion"><h5>HTTP provides aupport for other funtionalities</h5></button>
-                            
-                        <div class="panel">    
-                            <ol type="1">
-                                <li> Cache control </li>
-                                <li> Content media type (MIME) specification </li>
-                                <li> Language and character set specification </li>
-                                <li> Content/Transfer coding </li>
-                                <li> Client server protocol negotiation </li>
-                                <li> Persistent connection </li>
-                                <li> Request pipelining </li>
-                                <li> Authentication/Authorization </li>
-                            </ol>
-                        </div>
+                       
                           
                         </div>
                       
                         <div id="topic2">
-                        <h2> HTTP Resource Addressing </h2>
-                        <button class="accordion"><h6>Scheme</h6></button>
-                           	<div class="panel">Consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:).
+                            <h2> Built in Module </h2>
+                         <button class="accordion"><h5>Node.js Built-in modules</h5></button>
+                            
+                        <div class="panel">    
+                            <table class="table table-bordered table-striped">
+            <tr>
+                <th>assert</th>
+                <td>Module for asserting tests</td>
+
+            </tr>
+            <tr>
+                <th>crypto</th>
+                <td>Module for handling OpenSSL encryption</td>
+            </tr>
+            <tr>
+                <th>fs</th>
+                <td>File system - reading and writing files</td>
+            </tr>
+            <tr>
+                <th>http</th>
+                <td>Module for creating a HTTP server</td>
+            </tr>
+            <tr>
+                <th>https</th>
+                <td>Module for creating a HTTPS server</td>
+            </tr>
+            <tr>
+                <th>net</th>
+                <td>Module for creating network servers and clients</td>
+            </tr>
+            <tr>
+                <th>querystring</th>
+                <td>Module for handling URL query strings</td>
+            </tr>
+            <tr>
+                <th>url</th>
+                <td>Module for parsing URL a string</td>
+            </tr>
+            <tr>
+                <th>util</th>
+                <td>Utility functions</td>
+            </tr>
+            <tr>
+                <th>zlib</th>
+                <td>Module for compressing/decompressing files</td>
+            </tr>
+        </table>
+                            <p>Reference: https://www.w3schools.com/nodejs/ref_modules.asp</p>
                         </div>
-                        <button class="accordion"><h6>Authority</h6></button>
-                           	<div class="panel">An authority part which consist of an optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@). However this has already been deprecated. 
-                        </div>
-                        <button class="accordion"><h6>Host</h6></button>
-                           	<div class="panel">Domain name (resolve to an IP address using DNS) of the server where the resource resides or will be created. 
-                        </div>
-                        <button class="accordion"><h6>Port</h6></button>
-                           	<div class="panel"> An endpoint of communication in an operating system. Default port of HTTP is 80 and HTTPS is 443.
-                        </div>
-                        <button class="accordion"><h6>Path</h6></button>
-                           	<div class="panel">Path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.
-                        </div>
-                        <button class="accordion"><h6>Query</h6></button>
-                           	<div class="panel">An optional query, separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Typically provided as key value pairs with ampresand ('&') separators between key value pairs. 
-                        </div>
-                        <button class="accordion"><h6>Fragment Identifier</h6></button>
-                           	<div class="panel">An optional fragment, separated from the preceding part by a hash (#) and is identified by a key
-                        </div>
-                        <button class="accordion"><h6>Example</h6></button>
-                        <div class = "panel">
-                         <button class="accordion">Given</button>
-		                         <div class="panel">
-		                         <h5>http://usr:pwd@www.test.org:80/info/index.html?id=123#add</h5></div>
-                          <button class="accordion">Anser</button>
-                         <div class="panel">
-		                        <ul>
-		                        <li>http:// - <b> Scheme </b></li>
-		                        <li>usr:pwd@ - <b> Authority </b></li>
-		                        <li>www.test.org - <b> Host </b></li>
-		                        <li>:80 - <b> Port </b></li>
-		                        <li>/info/index.html - <b> Path </b></li>
-		                        <li>?id=123 - <b> Query </b></li>
-		                        <li>#add - <b> Fragment Identifier </b></li>
-		                        </ul>
-		                  </div>
-		                  </div>
 </div>
 
 
@@ -357,6 +353,7 @@
                       </div>
                       <ul class="list1">
                         <li><a href="#" class="content1">HTTP Module</a></li>
+                          <li><a href="#" class="content2">Node Module</a></li>
                       </ul>
                     </article>
                   </div>

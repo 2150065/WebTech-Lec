@@ -92,7 +92,7 @@
                             <div class="panel">
                                 <h3 class="accordion">$GLOBALS</h3>
                                 <div class="panel">
-                                <p>This are variables that are global - accessible throughout a PHP script. Syntax: </p>
+                                <p>This are variables that are global - accessible throughout a PHP script. Usage: </p>
                                 <table>
                                 <tr>
                                 <th>$GLOBALS[index] = value; //setting the value of $GLOBALS</th>
@@ -104,7 +104,7 @@
                                 </div>
                             <h3 class="accordion">$_SERVER</h3>
                             <div class="panel">
-                                <p>An array containing information about the server. Syntax: </p>
+                                <p>An array containing information about the server. Usage: </p>
                                 <table>
                                 <tr>
                                 <th>$_SERVER['PHP_SELF'];</th>
@@ -128,7 +128,7 @@
                                 </div>
                             <h3 class="accordion">$_REQUEST</h3>
                             <div class="panel">
-                                <p>This are used to collect data from an HTML form. Syntax:  </p>
+                                <p>This are used to collect data from an HTML form. Usage:  </p>
                                 <table>
                                 <tr>
                                 <th>&lt;?php echo $_SERVER['PHP_SELF']; ?&gt; //placed in the action attribute of HTML</th>
@@ -138,22 +138,69 @@
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by CSS Selectors </h3>
+                            <h3 class="accordion">$_POST</h3>
                             <div class="panel">
-                                <p> This finds all HTML elements that has the same specified CSS selector. </p>
-                                <p> This example returns a list of all &lt;p&gt; elements with class="main".</p>
+                                <p>Used to retrieve requests that are sent via POST method. Usage:</p>
                                 <table>
                                 <tr>
-                                <th>var a = document.querySelectorAll("p.main");</th>
+                                <th>$_POST[name]; //retrieving the value</th>
+                                </tr>
+								<tr>
+                                <th>$value = $_POST['name']; //assigning the value to a variable</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by HTML Object Collections </h3>
+							<h3 class="accordion">$_GET</h3>
                             <div class="panel">
-                                <p> This example finds the form element with id="form1" in the forms collection. </p>
+                                <p>Used to retrieve requests that are sent via GET method. Usage:</p>
                                 <table>
                                 <tr>
-                                <th>var a = document.forms["form1"];</th>
+                                <th>$_GET[name]; //retrieving the value</th>
+                                </tr>
+								<tr>
+                                <th>$value = $_GET['name']; //assigning the value to a variable</th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_FILES</h3>
+                            <div class="panel">
+                                <p>An associative array that contains items that are uploaded via HTTP POST method</p>
+                                <table>
+                                <tr>
+                                <th></th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_ENV</h3>
+                            <div class="panel">
+                                <p>Used to retrieve requests that are sent via environment method. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>$_ENV['name']; //retrieving the value</th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_COOKIE</h3>
+                            <div class="panel">
+                                <p>Contains an associative array containing requests that are sent via HTTP cookies. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>$_COOKIE['name']; //retrieving the value</th>
+                                </tr>
+                                </table>
+                                </div>
+                            <h3 class="accordion">$_SESSION</h3>
+                            <div class="panel">
+                                <p>Associative array of variables that are accessible in between PHP scripts. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>session_start(); //starting or resuming a session</th>
+                                </tr>
+								<tr>
+                                <th>$_SESSION['name'] = value; //assigning a value to a session</th>
+                                </tr>
+								<tr>
+                                <th>session_destroy(); //destroy all existing sessions</th>
                                 </tr>
                                 </table>
                             </div>

@@ -61,73 +61,25 @@
                         </div>
                       
                         <div id="topic2">
-                        <h2> HTTP Resource Addressing </h2>
-                        <button class="accordion"><h6>Scheme</h6></button>
-                           	<div class="panel">Consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:).
+                            <h2> Servlet Processing </h2>
+                            <ul>
+                                <p>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container. </p>
+                                <p>Servlet container checks if servlet is already loaded.</p>
+                                <p>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</p>
+                                <p>Servlet container invokes the servlet's service method, passing request and response objects as arguments.</p>
+                                <p>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the web server, which in turn sends the response to the client.</p>
+                                <p>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</p>
+                            </ul>
+                       
                         </div>
-                        <button class="accordion"><h6>Authority</h6></button>
-                           	<div class="panel">An authority part which consist of an optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@). However this has already been deprecated. 
-                        </div>
-                        <button class="accordion"><h6>Host</h6></button>
-                           	<div class="panel">Domain name (resolve to an IP address using DNS) of the server where the resource resides or will be created. 
-                        </div>
-                        <button class="accordion"><h6>Port</h6></button>
-                           	<div class="panel"> An endpoint of communication in an operating system. Default port of HTTP is 80 and HTTPS is 443.
-                        </div>
-                        <button class="accordion"><h6>Path</h6></button>
-                           	<div class="panel">Path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.
-                        </div>
-                        <button class="accordion"><h6>Query</h6></button>
-                           	<div class="panel">An optional query, separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Typically provided as key value pairs with ampresand ('&') separators between key value pairs. 
-                        </div>
-                        <button class="accordion"><h6>Fragment Identifier</h6></button>
-                           	<div class="panel">An optional fragment, separated from the preceding part by a hash (#) and is identified by a key
-                        </div>
-                        <button class="accordion"><h6>Example</h6></button>
-                        <div class = "panel">
-                         <button class="accordion">Given</button>
-		                         <div class="panel">
-		                         <h5>http://usr:pwd@www.test.org:80/info/index.html?id=123#add</h5></div>
-                          <button class="accordion">Anser</button>
-                         <div class="panel">
-		                        <ul>
-		                        <li>http:// - <b> Scheme </b></li>
-		                        <li>usr:pwd@ - <b> Authority </b></li>
-		                        <li>www.test.org - <b> Host </b></li>
-		                        <li>:80 - <b> Port </b></li>
-		                        <li>/info/index.html - <b> Path </b></li>
-		                        <li>?id=123 - <b> Query </b></li>
-		                        <li>#add - <b> Fragment Identifier </b></li>
-		                        </ul>
-		                  </div>
-		                  </div>
-</div>
 
 
                         <div id="topic3">
                         <h2> HTTP Request Methods </h2>
 
-                                <button class="accordion"><h6>GET</h6></button>
-                                    <div class="panel"> requests a representation of the specified resource. Requests using GET should only retrieve data.</div>
-                                <button class="accordion"><h6>HEAD</h6></button>
-                                     <div class="panel"> asks for a response identical to that of a GET request, but without the response body.</div>
-								<button class="accordion"><h6>POST</h6></button>
-                                     <div class="panel"> used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</div>
-                                <button class="accordion"><h6>PUT</h6></button>
-                                     <div class="panel"> replaces all current representations of the target resource with the request payload.</div>
-                                <button class="accordion"><h6>DELETE</h6></button>
-                                     <div class="panel">deletes the specified resource.</div>
-                                <button class="accordion"><h6>CONNECT</h6></button>
-                                     <div class="panel"> establishes a tunnel to the server identified by the target resource.</div>
-                                <button class="accordion"><h6>OPTIONS</h6></button>
-                                     <div class="panel"> used to describe the communication options for the target resource.</div>
-                                <button class="accordion"><h6>TRACE</h6></button>
-                                     <div class="panel"> performs a message loop-back test along the path to the target resource.</div>
-                                <button class="accordion"><h6>PATCH</h6></button>
-                                     <div class="panel"> used to apply partial modifications to a resource. </div>
-                           
-
-                                 <p>Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</p>                   
+                            <button class="accordion"><h6>GET</h6></button>
+                                <div class="panel"> requests a representation of the specified resource. Requests using GET should only retrieve data.</div>
+                                                 
    
                         </div>
 
@@ -136,24 +88,7 @@
                           
                           <button class="accordion"><h6>Cache-Control</h6></button>
                                      <div class="panel"> used to specify directives that must be obeyed by all caching mechanisms along the request/response chain. </div>
-                            <button class="accordion"><h6>Connection</h6></button>
-                                     <div class="panel"> allows the sender to specify options that are desired for that particular connection and must not be communicated by proxies over further connections. </div>
-                           <button class="accordion"><h6>Date</h6></button>
-                                     <div class="panel"> represents the date and time at which the message was originated. </div>
-                           <button class="accordion"><h6>Pragma</h6></button>
-                                     <div class="panel"> used to include implementation- specific directives that might apply to any recipient along the request/response chain.</div>
-                           <button class="accordion"><h6>Trailer</h6></button>
-                                     <div class="panel"> indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding. </div>
-                           <button class="accordion"><h6>Transfer-Encoding</h6></button>
-                                     <div class="panel"> indicates what type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient.</div>
-                           <button class="accordion"><h6>Upgrade</h6></button>
-                                     <div class="panel"> allows the client to specify what additional communication protocols it supports and would like to use if the server finds it appropriate to switch protocols. </div>
-                           <button class="accordion"><h6>Via</h6></button>
-                                     <div class="panel"> must be used by gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, and between the origin server and the client on responses.</div>
-                           <button class="accordion"><h6>Warning</h6></button>
-                                     <div class="panel"> used to carry additional information about the status or transformation of a message which might not be reflected in the message. </div>
-
-                           <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>                             
+                                                         
                                 
                         </div>
 
@@ -161,77 +96,21 @@
                         <h2> Request Header Fields </h2>
                             <button class="accordion"><h6>Accept</h6></button>
                                      <div class="panel"> used to specify certain media types which are acceptable for the response. </div>
-                            <button class="accordion"><h6>Accept-Charset</h6></button>
-                                     <div class="panel"> used to indicate what character sets are acceptable for the response. </div>
-                            <button class="accordion"><h6>Accept-Encoding</h6></button>
-                                     <div class="panel"> similar to Accept, but restricts the content-codings that are acceptable in the response. </div>
-                            <button class="accordion"><h6>Accept-Language</h6></button>
-                                     <div class="panel"> similar to Accept, but restricts the set of natural languages that are preferred as a response to the request. </div>
-                            <button class="accordion"><h6>Authorization</h6></button>
-                                     <div class="panel"> consists of credentials containing the authentication information of the user agent for the realm of the resource being requested.</div>
-                            <button class="accordion"><h6>Expect</h6></button>
-                                     <div class="panel"> used to indicate that particular server behaviors are required by the client. </div>
-                            <button class="accordion"><h6>From</h6></button>
-                                     <div class="panel"> contains an Internet e-mail address for the human user who controls the requesting user agent. </div>
-                            <button class="accordion"><h6>Host</h6></button>
-                                     <div class="panel"> specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource. </div>
-                            <button class="accordion"><h6>If-Match</h6></button>
-                                     <div class="panel">  used with a method to make it conditional. </div>
-                            <button class="accordion"><h6>If-Modified-Since </h6></button>
-                                     <div class="panel"> used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body.</div>
-                            <button class="accordion"><h6>If-None-Match</h6></button>
-                                     <div class="panel"> used with a method to make it conditional. </div>
-                            <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>                               
+                                                        
                         </div>
 
                         <div id="topic6">
                         <h2> Response Header Fields </h2>
                         <button class="accordion"><h6>Accept-Ranges</h6></button>
                                      <div class="panel"> allows the server to indicate its acceptance of range requests for a resource. </div>
-                            <button class="accordion"><h6>Age</h6></button>
-                                     <div class="panel"> conveys the sender's estimate of the amount of time since the response was generated at the origin server.</div>
-                            <button class="accordion"><h6>ETag</h6></button>
-                                     <div class="panel"> provides the current value of the entity tag for the requested variant. </div>
-                            <button class="accordion"><h6>Location</h6></button>
-                                     <div class="panel"> used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. </div>
-                            <button class="accordion"><h6>Proxy-Authenticate</h6></button>
-                                     <div class="panel"> consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy for this Request-URI.</div>
-                            <button class="accordion"><h6>Retry-After</h6></button>
-                                     <div class="panel"> used with a 503 (Service Unavailable) response to indicate how long the service is expected to be unavailable to the requesting client.</div>
-                            <button class="accordion"><h6>Server</h6></button>
-                                     <div class="panel"> indicates what extension transfer-codings it is willing to accept in the response and whether or not it is willing to accept trailer fields in a chunked transfer-coding. </div>
-                            <button class="accordion"><h6>Vary</h6></button>
-                                     <div class="panel"> indicates the set of request-header fields that fully determines, while the response is fresh, whether a cache is permitted to use the response to reply to a subsequent request without revalidation.</div>
-                            <button class="accordion"><h6>WWW-Authenticate</h6></button>
-                                     <div class="panel">  consists of at least one challenge that indicates the authentication scheme(s) and parameters applicable to the Request-URI. </div>
-
-                            <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>                      
+                                                  
                         </div>
 
                         <div id="topic7">
                         <h2> Entity Header Fields </h2>
                         <button class="accordion"><h6>Allow</h6></button>
                                      <div class="panel"> lists the set of methods supported by the resource identified by the Request-URI. </div>
-                            <button class="accordion"><h6>Content-Encoding</h6></button>
-                                     <div class="panel"> used as a modifier to the media-type.</div>
-                            <button class="accordion"><h6>Content-Language </h6></button>
-                                     <div class="panel"> describes the natural language(s) of the intended audience for the enclosed entity.</div>     
-                            <button class="accordion"><h6>Content-Length </h6></button>
-                                     <div class="panel"> indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET. </div>
-                             <button class="accordion"><h6>Content-Location </h6></button>
-                                     <div class="panel"> may be used to supply the resource location for the entity enclosed in the message when that entity is accessible from a location separate from the requested resource's URI.</div>
-                            <button class="accordion"><h6>Content-MD5</h6></button>
-                                     <div class="panel"> is an MD5 digest of the entity-body for the purpose of providing an end-to-end message integrity check (MIC) of the entity-body.</div>
-                            <button class="accordion"><h6>Content-Range</h6></button>
-                                     <div class="panel"> is sent with a partial entity-body to specify where in the full entity-body the partial body should be applied.</div>
-                            <button class="accordion"><h6>Content-Type</h6></button>
-                                     <div class="panel">indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET. </div>
-                            <button class="accordion"><h6>Expires</h6></button>
-                                     <div class="panel"> Gives the date/time after which the response is considered stale.</div>
-                            <button class="accordion"><h6>Last Modified</h6></button>
-                                     <div class="panel">  indicates the date and time at which the origin server believes the variant was last modified.</div>
                         
-                                <p>Reference: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>  
                         </div>
 
                         <div id="topic8">
@@ -245,69 +124,7 @@
                                  </ul>
                                  </div>
 
-                                <button class="accordion"> <h5> Success (2xx) </h5></button>
-                                <div class="panel">
-                                 <ul>
-                                 	<li> 200 OK </li>
-                                 	<li> 202 Accepted </li>
-                                 	<li> 203 Non-Authoritative Information </li>
-                                 	<li> 204 No Content </li>
-                                 	<li> 205 Reset Content </li>
-                                 	<li> 206 Partial Content </li>
-                                 </ul>
-                                 </div>
-
-                                 <button class="accordion"> <h5> Redirection (3xx) </h5></button>
-                                 <div class="panel">
-                                 <ul> 
-                                 	<li> 300 Multiple Choices </li>
-                                 	<li> 301 Moved Permanently </li>
-                                 	<li> 302 Found </li>
-                                 	<li> 303 See Other </li>
-                                 	<li> 304 Not Modified </li>
-                                	<li> 305 Use Proxy </li>
-                                 	<li> 306 (Unused) </li>
-                                 	<li> 307 Temporary Redirect </li>
-                                 </ul>
-                                 </div>
-
-                                <button class="accordion">  <h5> Client Error (4xx) </h5></button>
-                                <div class="panel">
-                                 <ul>
-                                 	<li> 400 Bad Request </li>
-                                 	<li> 401 Unauthorized </li>
-                                 	<li> 402 Payment Required </li>
-                                 	<li> 403 Forbidden </li>
-                                 	<li> 404 Not Found </li>
-                                	<li> 405 Method not Allowed </li>
-                                 	<li> 406 Not Acceptable </li>
-                                 	<li> 407 Proxy Authentication Required </li>
-                                 	<li> 408 Request Timeout </li>
-                                 	<li> 409 Conflict </li>
-                                 	<li> 410 Gone </li>
-                                 	<li> 411 Length Required </li>
-                                 	<li> 412 Precondition Failed </li>
-                                 	<li> 413 Request Entity Too Large </li>
-                                 	<li> 414 Request-URI Too Long </li>
-                                 	<li> 415 Unsupported Media Type </li>
-                                 	<li> 416 Request Range Not Satisfiable </li>
-                                 	<li> 417 Expectation Failed </li>
-                                 	<li> 426 Upgrade Required </li>
-                                 </ul>
-                                </div>
-
-                                <button class="accordion"> <h5> Server Error (5xx) </h5></button>
-                                <div class="panel">
-                                 <ul>
-                                 	<li> 500 Internal Server Error </li>
-                                 	<li> 501 Not Implemented </li>
-                                 	<li> 502 Bad Gateway </li>
-                                 	<li> 503 Service Unavailable </li>
-                                 	<li> 504 Gateway Timeout </li>
-                                 	<li> 505 HTTP Version Not Supported </li>
-                                </ul>
-                                </div>    
-                </div>
+                        </div>
                     </article>
                     <article class="col2 pad_left2">
                       <div class="pad_left1">
@@ -315,13 +132,13 @@
                       </div>
                       <ul class="list1">
                         <li><a href="#" class="content1">Servlet</a></li>
-                        <li><a href="#" class="content2">servlet</a></li>
+                        <li><a href="#" class="content2">Servlet Processing</a></li>
                         <li><a href="#" class="content3">servlet</a></li>
-                        <li><a href="#" class="content4">General Header Fields</a></li>
-                        <li><a href="#" class="content5">Request Header Fields</a></li>
-                          <li><a href="#" class="content6">Response Header Fields</a></li>
-                          <li><a href="#" class="content7">Entity Header Fields</a></li>
-                          <li><a href="#" class="content8">HTTP Status Codes</a></li>
+                        <li><a href="#" class="content4">4</a></li>
+                        <li><a href="#" class="content5">5</a></li>
+                          <li><a href="#" class="content6">6</a></li>
+                          <li><a href="#" class="content7">7</a></li>
+                          <li><a href="#" class="content8">8</a></li>
                       </ul>
                     </article>
                   </div>

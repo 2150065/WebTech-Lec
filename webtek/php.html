@@ -56,19 +56,21 @@
                     <article class="col1">
                         
                       <div id="topic1">
-                        <h2> What is PHP? </h2>
-                        <p> General purpose scripting language mainly for web development. </p>
-                            
+                      <h2> PHP Fundamentals </h2>
+                        <button class="accordion"><h6>What is PHP?</h6></button>
+                            <div class="panel">
+                                <p> General purpose scripting language mainly for web development. </p>
+                            </div>
                       </div>
                       <div id="topic2">
                         <h2>PHP Basic Syntax</h2>
 						<p>All PHP codes are places in between the &lt;?php and ?&gt; tags</p>
                             
 							
-                            <button class="accordion"><h5>Declaring Variables</h5></button>
+                            <button class="accordion"><h6>Declaring Variables</h6></button>
                             <div class="panel">$variable name = value;</div>
 							
-                            <button class="accordion"><h5>Outputing Data</h5></button>
+                            <button class="accordion"><h6>Outputing Data</h6></button>
                             <div class="panel">
 							<ul>
                             <li>echo "Hello World";</li>
@@ -78,12 +80,12 @@
 							</ul>
                             </div>
 							
-                            <button class="accordion"><h5>Embedding PHP in HTML</h5></button>
+                            <button class="accordion"><h6>Embedding PHP in HTML</h6></button>
                             <div class="panel">
                             PHP can be embedded anywhere inside an HTML file by placing it in between &lt;?php and ?&gt; tags
                             </div>
 							
-							<button class="accordion"><h5>Comments</h5></button>
+							<button class="accordion"><h6>Comments</h6></button>
                             <div class="panel">
 							</ul>
                             <li>// one line PHP comment</li>
@@ -96,7 +98,7 @@
                       <div id="topic3">
                             <h2>PHP Superglobals</h2>
                             
-                                <button class="accordion"><h5>$GLOBALS</h5></button>
+                                <button class="accordion"><h6>$GLOBALS</h6></button>
                                 <div class="panel">
                                 <p>This are variables that are global - accessible throughout a PHP script. Usage: </p>
                                 <table>
@@ -109,7 +111,7 @@
                                 </table><br>
                                 </div>
 								
-                            <button class="accordion"><h5>$_SERVER</h5></button>
+                            <button class="accordion"><h6>$_SERVER</h6></button>
                             <div class="panel">
                                 <p>An array containing information about the server. Usage: </p>
                                 <table>
@@ -134,7 +136,7 @@
                                 </table><br>
                                 </div>
 								
-                            <button class="accordion"><h5>$_REQUEST</h5></button>
+                            <button class="accordion"><h6>$_REQUEST</h6></button>
                             <div class="panel">
                                 <p>This are used to collect data from an HTML form. Usage:  </p>
                                 <table>
@@ -146,7 +148,7 @@
                                 </tr>
                                 </table><br>
                                 </div>
-                            <button class="accordion"><h5>$_POST</h5></button>
+                            <button class="accordion"><h6>$_POST</h6></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via POST method. Usage:</p>
                                 <table>
@@ -159,7 +161,7 @@
                                 </table><br>
                                 </div>
 								
-							<button class="accordion"><h5>$_GET</h5></button>
+							<button class="accordion"><h6>$_GET</h6></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via GET method. Usage:</p>
                                 <table>
@@ -172,7 +174,7 @@
                                 </table><br>
                                 </div>
 								
-							<button class="accordion"><h5>$_FILES</h5></button>
+							<button class="accordion"><h6>$_FILES</h6></button>
                             <div class="panel">
                                 <p>An associative array that contains items that are uploaded via HTTP POST method: Basic usage: </p>
                                 <table>
@@ -185,7 +187,7 @@
                                 </table><br>
                                 </div>
 								
-							<button class="accordion"><h5>$_ENV</h5></button>
+							<button class="accordion"><h6>$_ENV</h6></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via environment method. Usage: </p>
                                 <table>
@@ -194,7 +196,7 @@
                                 </tr>
                                 </table><br>
                                 </div>
-							<button class="accordion"><h5>$_COOKIE</h5></button>
+							<button class="accordion"><h6>$_COOKIE</h6></button>
                             <div class="panel">
                                 <p>Contains an associative array containing requests that are sent via HTTP cookies. Usage: </p>
                                 <table>
@@ -203,7 +205,7 @@
                                 </tr>
                                 </table><br>
                                 </div>
-                            <button class="accordion"><h5>$_SESSION</h5></button>
+                            <button class="accordion"><h6>$_SESSION</h6></button>
                             <div class="panel">
                                 <p>Associative array of variables that are accessible in between PHP scripts. Usage: </p>
                                 <table>
@@ -226,12 +228,10 @@
                         <h2>PHP include vs require</h2>
 						<p>PHP include or require includes an existing php script inside the current working file</p>
 						
-                            
-							
-                            <button class="accordion"><h5>include</h5></button>
+                            <button class="accordion"><h6>include</h6></button>
                             <div class="panel">Script continues after producing a warning (E_WARNING)</div>
 							
-                            <button class="accordion"><h5>require</h5></button>
+                            <button class="accordion"><h6>require</h6></button>
                             <div class="panel">Stops the script after producing a fatal error (E_COMPILE_ERROR)</div>
 							
                   
@@ -246,10 +246,10 @@
                         <h2>Topics</h2>
                       </div>
                       <ul class="list1">
-                         <li><a href="#" class="content1">PHP</a></li>
+                         <li><a href="#" class="content1">PHP Fundamentals</a></li>
                           <li><a href="#" class="content2">Basic Syntax</a></li>
                           <li><a href="#" class="content3">Superglobals</a></li>
-						<li><a href="#" class="content4">include VS require</a></li>
+						<li><a href="#" class="content4">Include VS Require</a></li>
                           
                       </ul>
                     </article>

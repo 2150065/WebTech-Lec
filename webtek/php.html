@@ -59,71 +59,151 @@
                             </div>
                       </div>
                        <div id="topic2">
-                            <button class="accordion"><h2> php2 </h2></button>
+                            <button class="accordion"><h2> PHP Basic Syntax </h2></button>
                             <div class="panel">
+							<h3> All PHP codes are places in between the &lt;?php and ?&gt; tags</h3>
                             <dl>
-                            <dt class="accordion">Externally linked </dt>
+                            <dt class="accordion">Declaring Variables</dt>
                             <div class="panel">
-                            <dd> Can be placed anywhere and can be multiple</dd>
+                            <dd>$variable name = value;</dd>
                             </div>
-                            <dt class="accordion">Embedded </dt>
+                            <dt class="accordion">Outputing Data</dt>
                             <div class="panel">
-                            <dd> Not recommended </dd>
+                            <dd>echo "Hello World";</dd>
+							<dd>print "World, Hello";</dd>
+							<dd>echo $variable;</dd>
+							<dd>print $number1 + $number2;</dd>
                             </div>
-                            <dt class="accordion"> Inline script </dt>
+                            <dt class="accordion">Embedding PHP in HTML</dt>
                             <div class="panel">
-                            <dd> Event attributes (i.e., "on" + click)
+                            <dd>PHP can be embedded anywhere inside an HTML file by placing it in between &lt;?php and ?&gt; tags</dd>
+                            </div>
+							<dt class="accordion">Comments</dt>
+                            <div class="panel">
+                            <dd>// one line PHP comment</dd>
+							<dd>/* multi-line PHP comment */</dd>
+							<dd># one line shell style comment</dd>
                             </div>
                             </dl>
                             </div>
                       </div>
                       <div id="topic3">
-                            <button class="accordion"><h2> php3 </h2></button>
+                            <button class="accordion"><h2>PHP Superglobals</h2></button>
                             <div class="panel">
-                                <h3 class="accordion"> Finding HTML Element by Id </h3>
+                                <h3 class="accordion">$GLOBALS</h3>
                                 <div class="panel">
-                                <p> This example finds the element with id="main": </p>
+                                <p>This are variables that are global - accessible throughout a PHP script. Usage: </p>
                                 <table>
                                 <tr>
-                                <th>var theElement = document.getElementById("main");</th>
+                                <th>$GLOBALS[index] = value; //setting the value of $GLOBALS</th>
+                                </tr>
+								<tr>
+                                <th>$GLOBALS[index]; //retrieving the value of $GLOBALS</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by Tag Name </h3>
+                            <h3 class="accordion">$_SERVER</h3>
                             <div class="panel">
-                                <p> This example finds all &lt;p&gt; elements: </p>
+                                <p>An array containing information about the server. Usage: </p>
                                 <table>
                                 <tr>
-                                <th>var a = document.getElementByTagName("p");</th>
+                                <th>$_SERVER['PHP_SELF'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['SERVER_NAME'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_HOST'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_REFERER'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_USER_AGENT'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['SCRIPT_NAME'];</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by Class Name </h3>
+                            <h3 class="accordion">$_REQUEST</h3>
                             <div class="panel">
-                                <p> This finds all HTML elements with the same class name. </p>
-                                <p> This example returns a list of all elements with class="start".  </p>
+                                <p>This are used to collect data from an HTML form. Usage:  </p>
                                 <table>
                                 <tr>
-                                <th>var a = document.getElementByClassName("start");</th>
+                                <th>&lt;?php echo $_SERVER['PHP_SELF']; ?&gt; //placed in the action attribute of HTML</th>
+                                </tr>
+								<tr>
+                                <th>$_REQUEST['inputname']; //retrieving the value from the HTML form</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by CSS Selectors </h3>
+                            <h3 class="accordion">$_POST</h3>
                             <div class="panel">
-                                <p> This finds all HTML elements that has the same specified CSS selector. </p>
-                                <p> This example returns a list of all &lt;p&gt; elements with class="main".</p>
+                                <p>Used to retrieve requests that are sent via POST method. Usage:</p>
                                 <table>
                                 <tr>
-                                <th>var a = document.querySelectorAll("p.main");</th>
+                                <th>$_POST[name]; //retrieving the value</th>
+                                </tr>
+								<tr>
+                                <th>$value = $_POST['name']; //assigning the value to a variable</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by HTML Object Collections </h3>
+							<h3 class="accordion">$_GET</h3>
                             <div class="panel">
-                                <p> This example finds the form element with id="form1" in the forms collection. </p>
+                                <p>Used to retrieve requests that are sent via GET method. Usage:</p>
                                 <table>
                                 <tr>
-                                <th>var a = document.forms["form1"];</th>
+                                <th>$_GET[name]; //retrieving the value</th>
+                                </tr>
+								<tr>
+                                <th>$value = $_GET['name']; //assigning the value to a variable</th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_FILES</h3>
+                            <div class="panel">
+                                <p>An associative array that contains items that are uploaded via HTTP POST method: Basic usage: </p>
+                                <table>
+                                <tr>
+                                <th>$_FILES["fileToUpload"]["name"];</th>
+                                </tr>
+								<tr>
+                                <th>$_FILES["fileToUpload"]["size"];</th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_ENV</h3>
+                            <div class="panel">
+                                <p>Used to retrieve requests that are sent via environment method. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>$_ENV['name']; //retrieving the value</th>
+                                </tr>
+                                </table>
+                                </div>
+							<h3 class="accordion">$_COOKIE</h3>
+                            <div class="panel">
+                                <p>Contains an associative array containing requests that are sent via HTTP cookies. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>$_COOKIE['name']; //retrieving the value</th>
+                                </tr>
+                                </table>
+                                </div>
+                            <h3 class="accordion">$_SESSION</h3>
+                            <div class="panel">
+                                <p>Associative array of variables that are accessible in between PHP scripts. Usage: </p>
+                                <table>
+                                <tr>
+                                <th>session_start(); //starting or resuming a session</th>
+                                </tr>
+								<tr>
+                                <th>$_SESSION['name'] = value; //assigning a value to a session</th>
+                                </tr>
+								<tr>
+                                <th>session_destroy(); //destroy all existing sessions</th>
                                 </tr>
                                 </table>
                             </div>
@@ -380,8 +460,8 @@
                       </div>
                       <ul class="list1">
                          <li><a href="#" class="content1">PHP</a></li>
-                          <li><a href="#" class="content2">PHP2</a></li>
-                          <li><a href="#" class="content3">PHP3</a></li>
+                          <li><a href="#" class="content2">Basic Syntax</a></li>
+                          <li><a href="#" class="content3">Superglobals</a></li>
                           <li><a href="#" class="content4">PHP4</a></li>
                           <li><a href="#" class="content5">PHP5</a></li>
                           <li><a href="#" class="content6">PHP6</a></li>

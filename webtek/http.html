@@ -101,20 +101,48 @@
                         </div>
                       
                         <div id="topic2">
-                        <button class="accordion"><h5> HTTP Resource Addressing </h5></button>
-                            <div class="panel">
-                                <p>URI syntax comprises of:</p>
-								
-									<p> The scheme, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:). </p>
-									<p> An authority part which consist of an optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@).</p>
-									<p> Path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one. </p>
-									<p> An optional query, separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. </p>
-									<p> An optional fragment, separated from the preceding part by a hash (#). </p>
-
-                                    <p>Reference: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier</p>
-								
-                            </div>    
+                        <h2> HTTP Resource Addressing </h2>
+                        <button class="accordion"><h6>Scheme</h6></button>
+                           	<div class="panel">Consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:).
                         </div>
+                        <button class="accordion"><h6>Authority</h6></button>
+                           	<div class="panel">An authority part which consist of an optional authentication section of a user name and password, separated by a colon, followed by an at symbol (@). However this has already been deprecated. 
+                        </div>
+                        <button class="accordion"><h6>Host</h6></button>
+                           	<div class="panel">Domain name (resolve to an IP address using DNS) of the server where the resource resides or will be created. 
+                        </div>
+                        <button class="accordion"><h6>Port</h6></button>
+                           	<div class="panel"> An endpoint of communication in an operating system. Default port of HTTP is 80 and HTTPS is 443.
+                        </div>
+                        <button class="accordion"><h6>Path</h6></button>
+                           	<div class="panel">Path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.
+                        </div>
+                        <button class="accordion"><h6>Query</h6></button>
+                           	<div class="panel">An optional query, separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Typically provided as key value pairs with ampresand ('&') separators between key value pairs. 
+                        </div>
+                        <button class="accordion"><h6>Fragment Identifier</h6></button>
+                           	<div class="panel">An optional fragment, separated from the preceding part by a hash (#) and is identified by a key
+                        </div>
+                        <button class="accordion"><h6>Example</h6></button>
+                        <div class = "panel">
+                         <button class="accordion">Given</button>
+		                         <div class="panel">
+		                         <h5>http://usr:pwd@www.test.org:80/info/index.html?id=123#add</h5></div>
+                          <button class="accordion">Anser</button>
+                         <div class="panel">
+		                        <ul>
+		                        <li>http:// - <b> Scheme </b></li>
+		                        <li>usr:pwd@ - <b> Authority </b></li>
+		                        <li>www.test.org - <b> Host </b></li>
+		                        <li>:80 - <b> Port </b></li>
+		                        <li>/info/index.html - <b> Path </b></li>
+		                        <li>?id=123 - <b> Query </b></li>
+		                        <li>#add - <b> Fragment Identifier </b></li>
+		                        </ul>
+		                  </div>
+		                  </div>
+
+
 
                         <div id="topic3">
                         <h2> HTTP Request Methods </h2>
@@ -304,6 +332,7 @@
                                  	<li> 415 Unsupported Media Type </li>
                                  	<li> 416 Request Range Not Satisfiable </li>
                                  	<li> 417 Expectation Failed </li>
+                                 	<li> 426 Upgrade Required </li>
                                  </ul>
                                 </div>
 

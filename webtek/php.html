@@ -88,33 +88,53 @@
                             </div>
                       </div>
                       <div id="topic3">
-                            <button class="accordion"><h2> php3 </h2></button>
+                            <button class="accordion"><h2>PHP Superglobals</h2></button>
                             <div class="panel">
-                                <h3 class="accordion"> Finding HTML Element by Id </h3>
+                                <h3 class="accordion">$GLOBALS</h3>
                                 <div class="panel">
-                                <p> This example finds the element with id="main": </p>
+                                <p>This are variables that are global - accessible throughout a PHP script. Syntax: </p>
                                 <table>
                                 <tr>
-                                <th>var theElement = document.getElementById("main");</th>
+                                <th>$GLOBALS[index] = value; //setting the value of $GLOBALS</th>
+                                </tr>
+								<tr>
+                                <th>$GLOBALS[index]; //retrieving the value of $GLOBALS</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by Tag Name </h3>
+                            <h3 class="accordion">$_SERVER</h3>
                             <div class="panel">
-                                <p> This example finds all &lt;p&gt; elements: </p>
+                                <p>An array containing information about the server. Syntax: </p>
                                 <table>
                                 <tr>
-                                <th>var a = document.getElementByTagName("p");</th>
+                                <th>$_SERVER['PHP_SELF'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['SERVER_NAME'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_HOST'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_REFERER'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['HTTP_USER_AGENT'];</th>
+                                </tr>
+								<tr>
+                                <th>$_SERVER['SCRIPT_NAME'];</th>
                                 </tr>
                                 </table>
                                 </div>
-                            <h3 class="accordion"> Finding HTML Element by Class Name </h3>
+                            <h3 class="accordion">$_REQUEST</h3>
                             <div class="panel">
-                                <p> This finds all HTML elements with the same class name. </p>
-                                <p> This example returns a list of all elements with class="start".  </p>
+                                <p>This are used to collect data from an HTML form. Syntax:  </p>
                                 <table>
                                 <tr>
-                                <th>var a = document.getElementByClassName("start");</th>
+                                <th>&lt;?php echo $_SERVER['PHP_SELF']; ?&gt; //placed in the action attribute of HTML</th>
+                                </tr>
+								<tr>
+                                <th>$_REQUEST['inputname']; //retrieving the value from the HTML form</th>
                                 </tr>
                                 </table>
                                 </div>
@@ -391,7 +411,7 @@
                       <ul class="list1">
                          <li><a href="#" class="content1">PHP</a></li>
                           <li><a href="#" class="content2">Basic Syntax</a></li>
-                          <li><a href="#" class="content3">PHP3</a></li>
+                          <li><a href="#" class="content3">Superglobals</a></li>
                           <li><a href="#" class="content4">PHP4</a></li>
                           <li><a href="#" class="content5">PHP5</a></li>
                           <li><a href="#" class="content6">PHP6</a></li>

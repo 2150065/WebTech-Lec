@@ -32,6 +32,7 @@
             <li><a href="css.html">CSS</a></li>
             <li><a href="javascript.html">JavaScript</a></li>
             <li><a href="servlet.html">Servlet</a></li>
+            <li><a href="node.html">Node</a></li>
             <li class="end"><a href="php.html">PHP </a></li>
           </ul>
         </nav>
@@ -65,8 +66,8 @@
                             <ul>
                                 <p>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container. </p>
                                 <p>Servlet container checks if servlet is already loaded.</p>
-                                <p>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</p>
-                                <p>Servlet container invokes the servlet's service method, passing request and response objects as arguments.</p>
+                                <p>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init() method.</p>
+                                <p>Servlet container invokes the servlet's service() method, passing request and response objects as arguments.</p>
                                 <p>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the web server, which in turn sends the response to the client.</p>
                                 <p>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destroy method.</p>
                             </ul>
@@ -75,46 +76,142 @@
 
 
                         <div id="topic3">
-                        <h2> HTTP Request Methods </h2>
+                        <h2> Servlet API</h2>
 
-                            <button class="accordion"><h6>GET</h6></button>
-                                <div class="panel"> requests a representation of the specified resource. Requests using GET should only retrieve data.</div>
+                            <button class="accordion"><h3>javax.servlet</h3></button>
+                                <div class="panel">
+                                    <p>The javax.servlet package contains many interfaces and classes that are used by the servlet or web container. These are not specific to any protocol.</p>
+
+                                    <button class="accordion"><h4>Interfaces in javax.servlet package</h4></button>
+                                        <div class="panel">
+                                            <ul>
+                                                <li>Servlet</li>
+                                                <li>ServletRequest</li>
+                                                <li>ServletResponse</li>
+                                                <li>RequestDispatcher</li>
+                                                <li>ServletConfig</li>
+                                                <li>ServlerContext</li>
+                                                <li>SingleThreadModel</li>
+                                                <li>Filter</li>
+                                                <li>FilterConfig</li>
+                                                <li>FilterChain</li>
+                                                <li>ServletRequestListener</li>
+                                                <li>ServletRequestAttributeListener</li>
+                                                <li>ServletContextListener</li>
+                                                <li>ServletContextAttributeListener</li>
+                                            </ul>
+                                        </div>
+
+                                        <button class="accordion"><h4>Classes in javax.servlet package</h4></button>
+                                        <div class="panel">
+                                            <ul>
+                                                <li>GenericServlet</li>
+                                                <li>ServletInputStream</li>
+                                                <li>ServletOutputStream</li>
+                                                <li>ServletRequestWrapper</li>
+                                                <li>ServletResponseWrapper</li>
+                                                <li>ServletRequestEvent</li>
+                                                <li>ServletContextEvent</li>
+                                                <li>ServletRequestAttributeEvent</li>
+                                                <li>ServletContextAttributeEvent</li>
+                                                <li>ServletException</li>
+                                                <li>UnavailableException</li>
+                                            </ul>
+                                        </div>
+
+                                </div>
+
+                            <button class="accordion"><h3>javax.servlet.http</h3></button>
+                                <div class="panel">
+                                    <p>The javax.servlet.http package contains interfaces and classes that are responsible for http requests only.</p>
+
+                                    <button class="accordion"><h4>Interfaces in javax.servlet.http package</h4></button>
+                                        <div class="panel">
+                                            <ul>
+                                                <li>HttpServletRequest</li>
+                                                <li>HttpServletResponse</li>
+                                                <li>HttpSession</li>
+                                                <li>HttpSessionListener</li>
+                                                <li>HttpSessionAttributeListener</li>
+                                                <li>HttpSessionBindingListener</li>
+                                                <li>HttpSessionActivationListener</li>
+                                                <li>HttpSessionContext (deprecated now)</li>
+                                            </ul>
+                                        </div>
+
+                                    <button class="accordion"><h4>Classes in javax.servlet.http package</h4></button>
+                                        <div class="panel">
+                                            <ul>
+                                                <li>HttpServlet</li>
+                                                <li>Cookie</li>
+                                                <li>HttpServletRequestWrapper</li>
+                                                <li>HttpServletResponseWrapper</li>
+                                                <li>HttpSessionEvent</li>
+                                                <li>HttpSessionBindingEvent</li>
+                                                <li>HttpUtils (deprecated now)</li>
+                                            </ul>
+                                        </div>    
+
+                                </div>    
                                                  
    
                         </div>
 
                         <div id="topic4">
-                        <h2> General Header Fields  </h2>
+                        <h2> Servlet Request/Response Processing </h2>
                           
-                          <button class="accordion"><h6>Cache-Control</h6></button>
-                                     <div class="panel"> used to specify directives that must be obeyed by all caching mechanisms along the request/response chain. </div>
-                                                         
+                          <button class="accordion"><h6>Servlet Request Processing</h6></button>
+                                     <div class="panel"> 
+                                    <ul>
+                                        <li>Retrieving user-supplied request parameters</li>
+                                        <li>Retrieving request header values</li>
+                                    </ul>
+                            </div>
+                                <button class="accordion"><h6>Servlet Response Processing</h6></button>
+                                     <div class="panel"> 
+                                    <ul>
+                                        <li>Setting response status code</li>
+                                        <li>Setting response headers</li>
+                                        <li>Obtaining output object for sending the response</li>
+                                    </ul>
+                            </div>                     
                                 
                         </div>
 
                         <div id="topic5">
-                        <h2> Request Header Fields </h2>
-                            <button class="accordion"><h6>Accept</h6></button>
-                                     <div class="panel"> used to specify certain media types which are acceptable for the response. </div>
-                                                        
+                        <h2> Servlet Session Tracking </h2>
+                            <button class="accordion"><h6>Session Tracking</h6></button>
+                                     <div class="panel"> <ul>
+                    
+                    <li>Session Tracking(HttpSession)</li>
+                        <ul>
+                            <li>Obtaining session object from the current reques</li>
+                                <ul>
+                                    <pre><code class="java">
+                    HttpSession session;
+                    session = request.getSession(createNew);
+
+                                    </code></pre>
+                                </ul>
+                        </ul>
                         </div>
 
                         <div id="topic6">
-                        <h2> Response Header Fields </h2>
+                        <h2> servlet </h2>
                         <button class="accordion"><h6>Accept-Ranges</h6></button>
                                      <div class="panel"> allows the server to indicate its acceptance of range requests for a resource. </div>
                                                   
                         </div>
 
                         <div id="topic7">
-                        <h2> Entity Header Fields </h2>
+                        <h2> 7 </h2>
                         <button class="accordion"><h6>Allow</h6></button>
                                      <div class="panel"> lists the set of methods supported by the resource identified by the Request-URI. </div>
                         
                         </div>
 
                         <div id="topic8">
-                            <h3> HTTP Status Codes </h3>
+                            <h2> 8 </h2>
  
                                 <button class="accordion"><h5> Informational (1xx) </h5></button>
                                 <div class="panel">
@@ -133,9 +230,9 @@
                       <ul class="list1">
                         <li><a href="#" class="content1">Servlet</a></li>
                         <li><a href="#" class="content2">Servlet Processing</a></li>
-                        <li><a href="#" class="content3">servlet</a></li>
-                        <li><a href="#" class="content4">4</a></li>
-                        <li><a href="#" class="content5">5</a></li>
+                        <li><a href="#" class="content3">Servlet API</a></li>
+                        <li><a href="#" class="content4">Servlet Response/Request</a></li>
+                        <li><a href="#" class="content5">Session Tracking</a></li>
                           <li><a href="#" class="content6">6</a></li>
                           <li><a href="#" class="content7">7</a></li>
                           <li><a href="#" class="content8">8</a></li>

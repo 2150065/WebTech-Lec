@@ -13,6 +13,7 @@
     <script type="text/javascript" src="js/Molengo_400.font.js"></script>
     <script type="text/javascript" src="js/Expletus_Sans_400.font.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" href="js/accordion.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <style type="text/css">.bg, .box2{behavior:url("js/PIE.htc");}</style>
@@ -54,44 +55,47 @@
                     <article class="col1">
                         
                       <div id="topic1">
-                            <button class="accordion"><h2> What is PHP? </h2></button>
-                            <div class="panel">
-                            <p> General purpose scripting language mainly for web development. </p>
-                            </div>
+                        <h2> What is PHP? </h2>
+                        <p> General purpose scripting language mainly for web development. </p>
+                            
                       </div>
-                       <div id="topic2">
-                            <button class="accordion"><h2> PHP Basic Syntax </h2></button>
+                      <div id="topic2">
+                        <h2>PHP Basic Syntax</h2>
+						<p>All PHP codes are places in between the &lt;?php and ?&gt; tags</p>
+                            
+							
+                            <button class="accordion"><h5>Declaring Variables</h5></button>
+                            <div class="panel">$variable name = value;</div>
+							
+                            <button class="accordion"><h5>Outputing Data</h5></button>
                             <div class="panel">
-							<h3> All PHP codes are places in between the &lt;?php and ?&gt; tags</h3>
-                            <dl>
-                            <dt class="accordion">Declaring Variables</dt>
+							<ul>
+                            <li>echo "Hello World";</li>
+							<li>print "World, Hello";</li>
+							<li>echo $variable;</li>
+							<li>print $number1 + $number2;</li>
+							</ul>
+                            </div>
+							
+                            <button class="accordion"><h5>Embedding PHP in HTML</h5></button>
                             <div class="panel">
-                            <dd>$variable name = value;</dd>
+                            PHP can be embedded anywhere inside an HTML file by placing it in between &lt;?php and ?&gt; tags
                             </div>
-                            <dt class="accordion">Outputing Data</dt>
+							
+							<button class="accordion"><h5>Comments</h5></button>
                             <div class="panel">
-                            <dd>echo "Hello World";</dd>
-							<dd>print "World, Hello";</dd>
-							<dd>echo $variable;</dd>
-							<dd>print $number1 + $number2;</dd>
+							</ul>
+                            <li>// one line PHP comment</li>
+							<li>/* multi-line PHP comment */</li>
+							<li># one line shell style comment</li>
+							</ul>
                             </div>
-                            <dt class="accordion">Embedding PHP in HTML</dt>
-                            <div class="panel">
-                            <dd>PHP can be embedded anywhere inside an HTML file by placing it in between &lt;?php and ?&gt; tags</dd>
-                            </div>
-							<dt class="accordion">Comments</dt>
-                            <div class="panel">
-                            <dd>// one line PHP comment</dd>
-							<dd>/* multi-line PHP comment */</dd>
-							<dd># one line shell style comment</dd>
-                            </div>
-                            </dl>
-                            </div>
+                         
                       </div>
                       <div id="topic3">
-                            <button class="accordion"><h2>PHP Superglobals</h2></button>
-                            <div class="panel">
-                                <h3 class="accordion">$GLOBALS</h3>
+                            <h2>PHP Superglobals</h2>
+                            
+                                <button class="accordion"><h5>$GLOBALS</h5></button>
                                 <div class="panel">
                                 <p>This are variables that are global - accessible throughout a PHP script. Usage: </p>
                                 <table>
@@ -101,9 +105,10 @@
 								<tr>
                                 <th>$GLOBALS[index]; //retrieving the value of $GLOBALS</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-                            <h3 class="accordion">$_SERVER</h3>
+								
+                            <button class="accordion"><h5>$_SERVER</h5></button>
                             <div class="panel">
                                 <p>An array containing information about the server. Usage: </p>
                                 <table>
@@ -125,9 +130,10 @@
 								<tr>
                                 <th>$_SERVER['SCRIPT_NAME'];</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-                            <h3 class="accordion">$_REQUEST</h3>
+								
+                            <button class="accordion"><h5>$_REQUEST</h5></button>
                             <div class="panel">
                                 <p>This are used to collect data from an HTML form. Usage:  </p>
                                 <table>
@@ -137,9 +143,9 @@
 								<tr>
                                 <th>$_REQUEST['inputname']; //retrieving the value from the HTML form</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-                            <h3 class="accordion">$_POST</h3>
+                            <button class="accordion"><h5>$_POST</h5></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via POST method. Usage:</p>
                                 <table>
@@ -149,9 +155,10 @@
 								<tr>
                                 <th>$value = $_POST['name']; //assigning the value to a variable</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-							<h3 class="accordion">$_GET</h3>
+								
+							<button class="accordion"><h5>$_GET</h5></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via GET method. Usage:</p>
                                 <table>
@@ -161,9 +168,10 @@
 								<tr>
                                 <th>$value = $_GET['name']; //assigning the value to a variable</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-							<h3 class="accordion">$_FILES</h3>
+								
+							<button class="accordion"><h5>$_FILES</h5></button>
                             <div class="panel">
                                 <p>An associative array that contains items that are uploaded via HTTP POST method: Basic usage: </p>
                                 <table>
@@ -173,27 +181,28 @@
 								<tr>
                                 <th>$_FILES["fileToUpload"]["size"];</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-							<h3 class="accordion">$_ENV</h3>
+								
+							<button class="accordion"><h5>$_ENV</h5></button>
                             <div class="panel">
                                 <p>Used to retrieve requests that are sent via environment method. Usage: </p>
                                 <table>
                                 <tr>
                                 <th>$_ENV['name']; //retrieving the value</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-							<h3 class="accordion">$_COOKIE</h3>
+							<button class="accordion"><h5>$_COOKIE</h5></button>
                             <div class="panel">
                                 <p>Contains an associative array containing requests that are sent via HTTP cookies. Usage: </p>
                                 <table>
                                 <tr>
                                 <th>$_COOKIE['name']; //retrieving the value</th>
                                 </tr>
-                                </table>
+                                </table><br>
                                 </div>
-                            <h3 class="accordion">$_SESSION</h3>
+                            <button class="accordion"><h5>$_SESSION</h5></button>
                             <div class="panel">
                                 <p>Associative array of variables that are accessible in between PHP scripts. Usage: </p>
                                 <table>
@@ -206,251 +215,12 @@
 								<tr>
                                 <th>session_destroy(); //destroy all existing sessions</th>
                                 </tr>
-                                </table>
+                                </table><br>
                             </div>
                             <p> Source : W3Schools </p>
-                            </div>
+                            
                       </div>
-                      <div id="topic4">
-                            <button class="accordion"><h2> php4 </h2></button>
-                            <div class="panel">
-                            <h3 class="accordion"> Global Attributes </h3>
-                            <div class="panel">
-                            <table class="table table-bordered">
-                                        <tbody><tr>
-                                            <th style="width:100px">Attribute</th>
-                                            <th style="width:100px">HTML-5</th>
-                                            <th>Description</th>
-                                            </tr>
-                                            <tr>
-                                                <td>accesskey</td>
-                                                <td>&nbsp;</td>
-                                                <td>Specifies a shortcut key for an element to be used in place of keyboard.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>class</td>
-                                                <td>&nbsp;</td>
-                                                <td>The class of the element</td>
-                                            </tr>
-                                            <tr>
-                                                <td>contenteditable</td>
-                                                <td>Yes</td>
-                                                <td>Specify whether the element is editable or not.</td>
-                                            </tr>
-                                                <tr>
-                                                <td>contextmenu</td>
-                                                <td>Yes</td>
-                                                <td>Specifies a context menu for an element.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>data-*</td>
-                                                <td>Yes</td>
-                                                <td>Used to store custom data associated with the element.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>draggable</td>
-                                                <td>Yes</td>
-                                                <td>Boolean attribute to specify whether the element can be dragged or not.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>dropzone</td>
-                                                <td>Yes</td>
-                                                <td>Specifies whether the dragged data is copied, moved, or linked, when dropped.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>hidden</td>
-                                                <td>Yes</td>
-                                                <td>Specifies whether element should be visible or not.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>id</td>
-                                                <td>&nbsp;</td>
-                                                <td>A unique id for the element</td>
-                                            </tr>
-                                            <tr>
-                                                <td>spellcheck</td>
-                                                <td>Yes</td>
-                                                <td>Specifies if the element must have it's spelling or grammar checked.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>style</td>
-                                                <td>&nbsp;</td>
-                                                <td>An inline style definition</td>
-                                            </tr>
-                                            <tr>
-                                                <td>tabindex</td>
-                                                <td>&nbsp;</td>
-                                                <td>Specifies the tab order of an element.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>title</td>
-                                                <td>&nbsp;</td>
-                                                <td>A text to display in a tool tip</td>
-                                            </tr>
-                                            <tr>
-                                                <td>translate</td>
-                                                <td>Yes</td>
-                                                <td>Boolean attribute specifies whether the content of an element should be translated or not</td>
-                                            </tr>
-                                        </tbody>
-                                    </table> 
-                                    </div>
-                                    <h3 class = "accordion"> Specific Attributes </h3> 
-                                    <div class="panel">
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <th style="width:20%">Attribute</th>
-                                                <th style="width:20%">Value</th>
-                                                <th>Description</th>
-                                            </tr>
-                                            <tr><td>async (html5)</td>
-                                                <td>sync</td>
-                                                <td>Specifies that the script is executed asynchronously.</td></tr>
-                                            <tr><td>charset </td>
-                                                <td>charset</td>
-                                                <td>Defines the character encoding that the script uses. </td></tr>
-                                            <tr><td>defer </td>
-                                                <td>defer</td>
-                                                <td>Declares that the script will not generate any content. Therefore, the browser/user agent can continue parsing and rendering the rest of the page. </td></tr>
-                                            <tr><td>src </td>
-                                                <td>URL</td>
-                                                <td>Specifies a URI/URL of an external script. </td></tr>
-                                            <tr><td>type </td>
-                                                <td>text/javascript<br>application/ecmascript<br>application/javascript<br>text/vbscript</td>
-                                                <td>Specifies the scripting language as a content-type (MIME type). </td></tr>
-                                            <tr><td>xml:space </td>
-                                                <td>preserve</td>
-                                                <td><i>Deprecated</i>- Whether the whitespace in code should be preserved</td></tr>
-                                        </tbody>            
-                                    </table> 
-                                  </div>  
-                                  <p> Source : W3Schools </p>      
-                               </div>
-                            </div>   
-
                       
-                      <div id="topic5">
-                            <h2> php5 </h2>
-                            
-                            <button class="accordion"><h3> Simple/Primitive Types</h3></button>
-                            <div class="panel">
-                              <dl>
-                                <dt class="accordion"> Boolean (true / false) </dt>
-                                <div class="panel">
-                                <dd> Falsy - not exactly false but is equal to false. </dd>
-                                <dd> Truthy - not exactly true but is equal to true. </dd>
-                                </div>
-                                <dt class="accordion"> Numbers (decimal, hexadecimal notation) </dt>
-                                <div class="panel">
-                                <dd> Integers and decimals</dd>
-                                <dd> 0b - binary types </dd>
-                                <dd> 0 - octal notation </dd>
-                                <dd> 0x - hexadecimal </dd>
-                                <dd> 1e5 - exponential </dd>
-                                <dd> Always floating point division </dd>
-                                </div>
-                                <dt class="accordion"> Strings (Single or Double quote delimited) </dt>
-                                <div class="panel">
-                                <dd> "" , '' - delimit strings
-                                <dd> can be embedded - " ' ' "</dd>
-                                <dd> String interpolation - ` ` (evaluate)</dd>
-                                </div>
-                                <dt> Undefined and Null </dt>
-                                <dt> Null </dt>
-                              </dl>
-                            </div>
-                            <button class="accordion"><h3> Object Types </h3></button>
-                            <div class="panel">
-                            <dl>
-                            <dt> Standard Objects </dt>
-                            <dt class="accordion"> Mutator Methods </dt>
-                            <div class="panel">
-                            <dd> Used to control changes to a variable </dd>
-                            <ul>
-                            	<li>copyWithin()</li>
-                            	<li>fill()</li>
-                            	<li>pop()</li>
-                            	<li>push()</li>
-                            	<li>reverse()</li>
-                            	<li>shift()</li>
-                            	<li>sort()</li>
-                            	<li>splice()</li>
-                            	<li>unshift()</li>
-                            </ul>
-                            </dl>
-                            
-                            <dt class="accordion"> Accessor Methods </dt>
-                            <div class="panel">
-                            <dd> Do not affect or modify variables. </dd>
-                            <dd> Accessing methods from a collection one at a time.</dd>
-                            <ul>
-                            	<li>concat()</li>
-                            	<li>indexOf()</li>
-                            	<li>join()</li>
-                            	<li>lastIndexOf()</li>
-                            	<li>slice()</li>
-                            	<li>toString()</li>
-                            	<li>toLocaleString()</li>
-                            </ul>
-                            </div>
-                            <dt class="accordion"> Iteration Methods </dt>
-                            <div class="panel">
-                            <dd> </dd>
-                            <ul>
-                            	<li>entries()</li>
-                            	<li>every()</li>
-                            	<li>filter()</li>
-                            	<li>find()</li>
-                            	<li>findIndex()</li>
-                            	<li>forEach()</li>
-                            	<li>keys()</li>
-                            	<li>map()</li>
-                            	<li>reduce()</li>
-                            	<li>reduceRight()</li>
-                            	<li>some()</li>
-                            	<li>values()</li>
-                            </ul>
-                            </div>
-                            <dt class="accordion"> DOM Objects </dt>
-                            <div class="panel">
-                            <dd> </dd>
-                            <ul>
-                            	<li>anchor()</li>
-                            	<li>applet()</li>
-                            	<li>attr()</li>
-                            	<li>comment()</li>
-                            	<li>DOMexception()</li>
-                            	<li>DOMimplementaiton()</li>
-                            	<li>documentFragment()</li>
-                            	<li>element()</li>
-                            	<li>event()</li>
-                            	<li>form()</li>
-                            	<li>image()</li>
-                            	<li>input()</li>
-                                <li>layer()</li>
-                                <li>link()</li>
-                                <li>node()</li>
-                                <li>option()</li>
-                                <li>select()</li>
-                                <li>style()</li>
-                                <li>text()</li>
-                                <li>textarea()</li>
-                            
-                            </div>
-                            </ul>
-                            </div>
-                    </div>
-                    <div id="topic6">
-                            <button class="accordion"><h2> php6 </h2></button>   
-                            <div class="panel">                          
-                            <ul>
-                            <li> <b>var</b> - the scope of its current execution context which is either the enclosing function or for variables declared global. </li>
-                            <li> <b>let</b> - a variable that is not associated in global and available only for a specific block. </li>
-                            <li> <b>const</b> - similar to let, but can't be reassign on a different value. </li>
-                            </ul>
-                            </div>
-                      </div>
                             
                       
                       
@@ -463,9 +233,7 @@
                          <li><a href="#" class="content1">PHP</a></li>
                           <li><a href="#" class="content2">Basic Syntax</a></li>
                           <li><a href="#" class="content3">Superglobals</a></li>
-                          <li><a href="#" class="content4">PHP4</a></li>
-                          <li><a href="#" class="content5">PHP5</a></li>
-                          <li><a href="#" class="content6">PHP6</a></li>
+                         
                           
                       </ul>
                     </article>
